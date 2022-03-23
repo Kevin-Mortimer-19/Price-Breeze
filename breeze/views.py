@@ -16,4 +16,4 @@ def login(request):
    else:
       MyLoginForm = LoginForm()
 		
-   return render(request, 'loggedin.html', {"username" : username})
+   return render(request, 'home_page.html', {"username" : username})
