@@ -1,5 +1,7 @@
 
 
-to run command:
+to runserver:
 
-python3 manage.py runserver
+1. install python
+2. install Django -  python -m pip install Django
+3. runserver - python3 manage.py runserver
