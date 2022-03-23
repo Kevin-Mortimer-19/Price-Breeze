@@ -17,3 +17,16 @@ def login(request):
       MyLoginForm = LoginForm()
 		
    return render(request, 'home_page.html', {"username" : username})
+
+
+def create_account(request):
+   if request.method == "POST":
+
+   MyCreateForm = CreateForm(request.POST)
+
+   if MyCreateForm.is_valid():
+      MyCreateForm.save()
+   else:
+      MyCreateForm = CreateForm()
+
+   return render(request, 'homepage.html', {"username" : username})
