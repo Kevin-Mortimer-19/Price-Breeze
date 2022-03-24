@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>PB create account FORM</title>
+   <link rel="stylesheet" href="../../static/design.css" />
+</head>
+
+<body>
+   <h1>price breeze</h1>
+
+   <form name="form" method="POST">{% csrf_token %}
+         {{ form }}
+         <button type="submit" value="Login">
+            <strong>Login</strong>
+         </button>
+   </form>
+   <p>or </p><a href="{% url 'create_account'%}">Create Account</a>
+</body>
+
+</html>
