@@ -5,3 +5,12 @@ to runserver:
 1. install python
 2. install Django -  python -m pip install Django
 3. runserver - python3 manage.py runserver
+
+to update database:
+1. make appropriate changes in models.py
+2. python manage.py makemigrations
+3. python manage.py migrate
+
+admin credentials:
+username: superuser
+password: root

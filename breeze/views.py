@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from breeze.forms import LoginForm
+from breeze.forms import LoginForm, CreateForm
 
 def home(request):
     return render(request, 'account_creation.html')
@@ -20,13 +20,11 @@ def login(request):
 
 
 def create_account(request):
-   if request.method == "POST":
+    if request.method == "POST":
+        MyCreateForm = CreateForm(request.POST)
 
-   MyCreateForm = CreateForm(request.POST)
-
-   if MyCreateForm.is_valid():
-      MyCreateForm.save()
-   else:
-      MyCreateForm = CreateForm()
-
-   return render(request, 'homepage.html', {"username" : username})
+    if MyCreateForm.is_valid():
+        MyCreateForm.save()
+    else:
+        MyCreateForm = CreateForm()
+    return render(request, 'homepage.html', {"username" : username})

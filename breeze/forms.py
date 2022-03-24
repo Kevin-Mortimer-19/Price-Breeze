@@ -1,5 +1,5 @@
 from django import forms
-from breeze.models import Dreamreal
+from breeze.models import User
 
 
 class LoginForm(forms.Form):
@@ -8,7 +8,7 @@ class LoginForm(forms.Form):
 
    def clean_message(self):
       username = self.cleaned_data.get("username")
-      dbuser = Dreamreal.objects.filter(name=username)
+      dbuser = User.objects.filter(name=username)
 
       if not dbuser:
          raise forms.ValidationError("User does not exist in the database")
@@ -21,7 +21,7 @@ class CreateForm(forms.Form):
 
    def clean_message(self):
       username = self.cleaned_data.get("username")
-      dbuser = not Dreamreal.objects.filter(name=username)
+      dbuser = not User.objects.filter(name=username)
 
       if dbuser:
          raise forms.ValidationError("User already exists in the database")
