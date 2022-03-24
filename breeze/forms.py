@@ -1,5 +1,6 @@
 from django import forms
-from breeze.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 
 class LoginForm(forms.Form):
@@ -15,9 +16,7 @@ class LoginForm(forms.Form):
       return username
 
 
-class CreateForm(forms.Form):
-   user = forms.CharField(max_length=100)
-   password = forms.CharField(widget=forms.PasswordInput())
+class CreateForm(UserCreationForm):
 
    def clean_message(self):
       username = self.cleaned_data.get("username")
@@ -26,3 +25,9 @@ class CreateForm(forms.Form):
       if dbuser:
          raise forms.ValidationError("User already exists in the database")
       return username
+
+   def save(self, commit=True):
+      user = super(CreateForm, self).save(commit=False)
+      if commit:
+         user.save()
+      return user

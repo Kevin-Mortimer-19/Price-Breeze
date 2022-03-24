@@ -1,30 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from breeze.forms import LoginForm, CreateForm
-
-def home(request):
-    return render(request, 'account_creation.html')
-
-def login(request):
-   username = "not logged in"
-   
-   if request.method == "POST":
-      
-      MyLoginForm = LoginForm(request.POST)
-      
-      if MyLoginForm.is_valid():
-         username = MyLoginForm.cleaned_data['username']
-   else:
-      MyLoginForm = LoginForm()
-		
-   return render(request, 'home_page.html', {"username" : username})
-
+from django.contrib.auth.forms import UserCreationForm  
+from django.contrib.auth import login
+from django.contrib import messages
+from django.urls import reverse_lazy
+from django.views import generic
 
 def create_account(request):
     if request.method == "POST":
-        MyCreateForm = CreateForm(request.POST)
-
-    if MyCreateForm.is_valid():
-        MyCreateForm.save()
+        form = CreateForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, "Account created.")
+            return redirect("home")
+        else:
+            messages.error(request, "Account creation failed again.")
     else:
-        MyCreateForm = CreateForm()
-    return render(request, 'homepage.html', {"username" : username})
+        form = CreateForm()
+    return render(request, 'account_creation.html', {'form':form})
+
+def log_in(request):
+   return render(request, 'login.html')
+
+def home(request):
+    return render(request, "home_page.html")

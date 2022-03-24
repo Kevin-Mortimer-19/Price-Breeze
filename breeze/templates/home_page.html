@@ -5,13 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page DraftA</title>
-    <link rel="stylesheet" href="static/design.css" />
+    <link rel="stylesheet" href="../static/design.css" />
 </head>
 
 <body>
     <header>
         <h1>price breeze</h1>
-        <h3> welcome user </h3>
+        {% if user.is_authenticated %}
+        <h3> Welcome {{ user.get_username }} </h3>
+        {% endif %}
+        
         <nav class = "navBar">
             <ul>
                 <li><a href="signin.html">Sign-in</a> | </li>

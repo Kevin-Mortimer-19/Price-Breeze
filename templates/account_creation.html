@@ -10,15 +10,14 @@
 
 <body>
     <h1>price breeze</h1>
-    <form>
+    <form method="POST">{% csrf_token %}
         <div id="login-info">
-            <label> Create Your Account </label>
-            <input type="text" placeholder="Username" name="username" />
-            <input type="password" placeholder="Password" name="password" />
-            <button type="button" onclick="window.location.href='home_page.html'">create account</button>
+            {{ form }}
+            <button class="btn btn-primary" type="submit">create account</button>
         </div>
 
     </form>
+    <p>or </p><a href="{% url 'login'%}">Log In</a>
 
 </body>
 
