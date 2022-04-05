@@ -6,7 +6,7 @@
 }
 
 div button {
-    background-color: 6ABBA8;
+    background-color: #EFD3D7;
     width: 300px;
     border: dashed;
     border-radius: 3px;
@@ -19,12 +19,12 @@ div button {
     display: block;
     position: relative;
     font-size: 20px;
-    color: whitesmoke;
+    color: rgb(65, 105, 105);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
 
 a {
-    color: whitesmoke;
+    color: rgb(65, 105, 105);
     text-decoration: none;
 }
 
