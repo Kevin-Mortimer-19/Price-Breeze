@@ -33,14 +33,15 @@
         <form method="POST">{% csrf_token %}
             <div id="login-info">
                 {{ form }}
+                <div id = "submission">
+                    <button class="btn btn-primary" type="submit">Create Account</button>
+                    <p> or </p>
+                    <button><a href="{% url 'login'%}">Log In</a></button>
+                </div>
             </div>
         </form>
         
-        <div id = "submission">
-            <button class="btn btn-primary" type="submit">Create Account</button>
-            <p> or </p>
-            <button><a href="{% url 'login'%}">Log In</a></button>
-        </div>
+
         
     </section>
 </body>
