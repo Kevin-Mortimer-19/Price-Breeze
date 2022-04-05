@@ -4,21 +4,44 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PB - create account</title>
-    <link rel="stylesheet" href="../static/design.css" />
+    <title>account creation</title>
+    <link rel = "stylesheet" href = "../static/background.css">
+    <link rel="stylesheet" href="../../static/designB.css">
 </head>
 
 <body>
-    <h1>price breeze</h1>
-    <form method="POST">{% csrf_token %}
-        <div id="login-info">
-            {{ form }}
-            <button class="btn btn-primary" type="submit">create account</button>
+    <header>
+        <h1>price breeze</h1>
+    </header>
+
+    <section class = "backgroundArea">
+            <ul class = "circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </section>
+
+    <section class = "newAcc">
+        <form method="POST">{% csrf_token %}
+            <div id="login-info">
+                {{ form }}
+            </div>
+        </form>
+        
+        <div id = "submission">
+            <button class="btn btn-primary" type="submit">Create Account</button>
+            <p> or </p>
+            <button><a href="{% url 'login'%}">Log In</a></button>
         </div>
-
-    </form>
-    <p>or </p><a href="{% url 'login'%}">Log In</a>
-
+        
+    </section>
 </body>
-
 </html>
