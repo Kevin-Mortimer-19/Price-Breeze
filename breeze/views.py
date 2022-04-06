@@ -36,7 +36,7 @@ def log_in(request):
    return render(request, 'login.html')
 
 def home(request):
-    return render(request, "home_page.html")
+    return render(request, "main/home_page.html")
 
 
 
