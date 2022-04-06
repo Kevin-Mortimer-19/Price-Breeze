@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>account creation</title>
-    <link rel = "stylesheet" href = "../static/background.css">
-    <!--<link rel="stylesheet" href="../static/design.css">-->
-</head>
+    <link rel = "stylesheet" href = "../static/background.css?{% now "U" %}">
+    <link rel="stylesheet" href="../../static/accCreationDesign.css?{% now "U" %}">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
 
 <body>
     <header>
         <h1>price breeze</h1>
+        <!--<img src="../images/pbLOGO.png" alt="price breeze logo">-->
     </header>
 
     <section class = "backgroundArea">
@@ -33,14 +34,17 @@
         <form method="POST">{% csrf_token %}
             <div id="login-info">
                 {{ form }}
+
+                <br>
+                <div id = "submission">
+                    <button class="btn btn-primary" type="submit">Create Account</button>
+                    <p> or </p>
+                    <button><a href="{% url 'login'%}">Log In</a></button>
+                </div>
             </div>
         </form>
         
-        <div id = "submission">
-            <button class="btn btn-primary" type="submit">Create Account</button>
-            <p> or </p>
-            <button><a href="{% url 'login'%}">Log In</a></button>
-        </div>
+
         
     </section>
 </body>

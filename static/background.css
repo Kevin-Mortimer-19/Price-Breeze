@@ -12,7 +12,7 @@ header {
 }
 
 body {
-    background-color: darksalmon;
+    background-color: #E7E5E5;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     z-index: 9;
@@ -39,8 +39,8 @@ body {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(8, 67, 179, 0.747);
-    animation: animate 25s linear infinite;
+    background: #C9B0C6;
+    animation: animate 20s linear infinite;
     bottom: -150px;
 }
 
