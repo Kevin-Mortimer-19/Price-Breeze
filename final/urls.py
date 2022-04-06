@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
-from . import views
+from final import views
+
+app_name = "main" 
+
 urlpatterns = [
     path("", include("breeze.urls")),
     path('admin/', admin.site.urls),
