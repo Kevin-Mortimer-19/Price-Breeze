@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>account creation</title>
+    <title>Price Breeze - New Account</title>
     <link rel = "stylesheet" href = "../static/background.css?{% now "U" %}">
     <link rel="stylesheet" href="../../static/accCreationDesign.css?{% now "U" %}">
     <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
@@ -38,9 +38,10 @@
 
                 <br>
                 <div id = "submission">
-                    <button class="btn btn-primary" type="submit">Create Account</button>
+                    <button class="btn btn-primary" type="submit"><strong>Create Account</strong></button>
                     <p> or </p>
-                    <button><a href="{% url 'login'%}">Log In</a></button>
+                    <!-- <button><a href="{% url 'login'%}"><strong>Login</strong></a></button>-->
+                    <button onclick="location.href='{% url 'login'%}'" type="button"><strong>Log In</strong></button>
                 </div>
             </div>
         </form>
