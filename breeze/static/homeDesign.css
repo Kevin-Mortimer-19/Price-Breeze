@@ -1,6 +1,6 @@
 /* welcome _____ !*/
 #usernameShow {
-    color: bisque;
+    color: #8e9aaf;
     font-size: 100pxpx;
     font-family: 'Poppins', sans-serif;;
 }
@@ -22,52 +22,43 @@ a {
     color: #416969;
 }
 
-
-
+/*searchbar settings*/
 #searchBar {
     margin: 8px 0px 8px 0px;
     padding: 14px;
 }
 
 #searchBar input{
+    box-sizing: border-box;
     margin:10px;
     padding: 20px;
     width: 80%;
-    border-radius: 4px;
-    border-width: 10px;
-    border-style: ridge;
+    border-radius: 20px;
+    border-width: 5px;
+   /* border-style: ridge;*/
     border-color: lavender;
 }
 
 #searchBar button {
     margin:10px;
     padding: 20px;
+    width: 10%;
+    border-radius: 20px;
+    border-width: 5px;
+    background-color: #EFD3D7;
+    border-color: lavender;
+    color: #416969;
+    font-weight: bolder;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    max-width: fit-content;
+    overflow-x: hidden;
 }
 
-
-/*working on search pbar*/
-
-/*searchBar settings
-section button {
-    float: right;
-    padding: 8px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background-color: darkolivegreen;
-    font-size: large;
-    cursor: pointer;
-
-
-
-    input {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 90%;
-        margin: auto;
-        padding: 14px;
-    }
-}*/
+#searchBar button:hover {
+    background: #ebbcc3;
+}
 
 /*body {
     margin: auto;
