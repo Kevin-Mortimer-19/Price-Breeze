@@ -4,7 +4,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 from breeze import views
 
-app_name = "main"
+
 
 urlpatterns = [
     path("", views.create_account, name="create_account"),
