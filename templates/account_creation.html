@@ -4,14 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>account creation</title>
-    <link rel = "stylesheet" href = "../static/background.css">
-    <link rel="stylesheet" href="../../static/designB.css">
-</head>
+    <title>Price Breeze - New Account</title>
+    <link rel="shortcut icon" href="../images/price-breeze-logo.ico">
+    <link rel = "stylesheet" href = "../static/background.css?{% now "U" %}">
+    <link rel="stylesheet" href="../../static/accCreationDesign.css?{% now "U" %}">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
 
 <body>
     <header>
+        <br/>
         <h1>price breeze</h1>
+        <!--<img src="../images/pbLOGO.png" alt="price breeze logo">-->
+        <br/>
     </header>
 
     <section class = "backgroundArea">
@@ -33,10 +37,17 @@
         <form method="POST">{% csrf_token %}
             <div id="login-info">
                 {{ form }}
+
                 <div id = "submission">
-                    <button class="btn btn-primary" type="submit">Create Account</button>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <button class="btn btn-primary" type="submit"><strong>Create Account</strong></button>
+                    <br/>
                     <p> or </p>
-                    <button><a href="{% url 'login'%}">Log In</a></button>
+                    <br/>
+                    <!-- <button><a href="{% url 'login'%}"><strong>Login</strong></a></button>-->
+                    <button onclick="location.href='{% url 'login'%}'" type="button"><strong>Log In</strong></button>
                 </div>
             </div>
         </form>

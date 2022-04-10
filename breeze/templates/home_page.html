@@ -4,35 +4,57 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page DraftA</title>
-    <link rel="stylesheet" href="../static/design.css" />
+    <title>Price Breeze - Home</title>
+    <link rel="shortcut icon" href="../../images/price-breeze-logo.ico">
+    <link rel="stylesheet" href="../../static/homeDesign.css" />
+    <link rel = "stylesheet" href = "../../static/background.css?{% now "U" %}">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
+
 </head>
 
 <body>
     <header>
+        <br/>
         <h1>price breeze</h1>
-        {% if user.is_authenticated %}
-        <h3> Welcome {{ user.get_username }} </h3>
-        {% endif %}
-        
+        <br/>
+        <br/>
+        <div id = "usernameShow">
+            {% if user.is_authenticated %}
+            <h3> Welcome {{ user.get_username }} !</h3>
+            {% endif %}
+        </div>
+
         <nav class = "navBar">
             <ul>
-                <li><a href="signin.html">Sign-in</a> | </li>
-                <li><a href="createAcc.html">Create Account</a> | </li>
-                <li><a href="Home.html">Home</a></li>
+                <li> | <a href="{% url 'login'%}">Sign-in</a> | </li>
+                <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
+                <li><a href="home_page.html">Home</a> | </li>
             </ul>
         </nav>
+
     </header>
 
-
+    <section class = "backgroundArea">
+            <ul class = "circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </section>
 
     <section>
         <br/>
-        <p>
-            <!--<legend>search with us!</legend>-->
-            <input type="text" name="searchInput" placeholder="search...">
-            <button type="submit" name="searchButt">Search!</button>
-        </p>
+        <div id = "searchBar">
+            <input type="text" name="searchInput" placeholder="Search for products..">
+            <button type="submit" name="search-button">Search</button>
+        </div>
 
     </section>
 

@@ -5,15 +5,16 @@
 
 header {
     width: 100%;
-    color: darkslategray;
+    color: rgb(65, 105, 105);
     font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
     position: relative;
     z-index: 8;
 }
 
 body {
-    background-color:#E7E5E5;
-    font-family: 'Courier New', Courier, monospace;
+    background-color:#cbc0d3;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     z-index: 9;
     position: relative;
@@ -39,8 +40,8 @@ body {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: #E5D0E3;
-    animation: animate 25s linear infinite;
+    background: #dee2ff;
+    animation: animate 15s linear infinite;
     bottom: -150px;
 }
 
@@ -119,7 +120,6 @@ body {
             animation-delay: 0s;
             animation-duration: 10s;
         }
-
 
 @keyframes animate {
 
