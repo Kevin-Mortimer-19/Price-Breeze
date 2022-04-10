@@ -26,3 +26,6 @@ def log_in(request):
 
 def home(request):
     return render(request, "home_page.html")
+
+def list(request):
+    return render(request, "shopping_list.html")
