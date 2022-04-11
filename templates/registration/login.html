@@ -4,20 +4,55 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>PB create account FORM</title>
-   <link rel="stylesheet" href="../../static/design.css" />
+   <title>Price Breeze - Login</title>
+   <link rel = "stylesheet" href = "../../static/background.css?{% now "U" %}">
+   <link rel="stylesheet" href="../../static/accCreationDesign.css?{% now "U" %}">
+
 </head>
 
 <body>
-   <h1>price breeze</h1>
+   <header>
+      <br/>
+      <h1>price breeze</h1>
+      <br/>
+   </header>
 
-   <form name="form" method="POST">{% csrf_token %}
-         {{ form }}
-         <button type="submit" value="Login">
-            <strong>Login</strong>
-         </button>
-   </form>
-   <p>or </p><a href="{% url 'create_account'%}">Create Account</a>
+   <section class = "backgroundArea">
+      <ul class = "circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+      </ul>
+   </section>
+
+
+   <section class = "loginAcc">
+      <form name="form" method="POST">{% csrf_token %}
+         <div id = "login-info">
+            {{ form }}
+            <br>
+            <div id = "submission">
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <button type="submit" value="Login"><strong>Login</strong></button>
+               <br/>
+               <p> or </p>
+               <br/>
+               <button><a href="{% url 'create_account'%}"><strong>Create Account</strong></a></button>
+            </div>
+         </div>
+      </form>
+   </section>
 </body>
-
 </html>
