@@ -19,7 +19,7 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 
 from django.shortcuts import HttpResponse
-from open_json import startTable
+from breeze.open_json import *
 
 
 def create_account(request):
@@ -75,4 +75,12 @@ def list(request):
 
 def table(request):
 	output = startTable()
+	return HttpResponse(output)
+
+def tableSortH(request):
+	output = highTable()
+	return HttpResponse(output)
+
+def tableSortL(request):
+	output = lowTable()
 	return HttpResponse(output)
