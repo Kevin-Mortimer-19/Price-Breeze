@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from breeze.forms import LoginForm, CreateForm
+from breeze.models import ShoppingList, Item
 from django.contrib.auth.forms import UserCreationForm  
 from django.contrib.auth import login
 from django.contrib import messages
@@ -67,5 +68,10 @@ def password_reset_request(request):
 					return redirect ("accounts/password_reset/done/")
 	password_reset_form = PasswordResetForm()
 	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
+
 def list(request):
-    return render(request, "shopping_list.html")
+	list = ShoppingList.objects.get(userid=request.user)
+	items = Item.objects.filter(userid=list)
+	for item in items.iterator():
+		print(item.item_name)
+	return render(request, "shopping_list.html")
