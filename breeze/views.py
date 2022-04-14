@@ -72,6 +72,4 @@ def password_reset_request(request):
 def list(request):
 	list = ShoppingList.objects.get(userid=request.user)
 	items = Item.objects.filter(userid=list)
-	for item in items.iterator():
-		print(item.item_name)
-	return render(request, "shopping_list.html")
+	return render(request, "shopping_list.html", {"item_list":items})

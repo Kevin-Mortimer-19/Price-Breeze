@@ -17,7 +17,9 @@
     {% if user.is_authenticated %}
     <p> Welcome to your shopping list, {{ user.get_username }}. </p>
     {% endif %}
-        <!--This is where the shopping list will appear.-->
+    {% for item in item_list %}
+        <li>{{ item.item_name }}</li>
+    {% endfor %}
 {% endblock %}
 
 </html>
