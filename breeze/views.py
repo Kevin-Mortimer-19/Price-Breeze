@@ -31,6 +31,8 @@ def create_account(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             user = form.save()
+            list = ShoppingList(userid=user)
+            list.save()
             login(request, user)
             messages.success(request, "Account created.")
             return redirect("home")
