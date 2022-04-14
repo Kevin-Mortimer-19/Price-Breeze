@@ -9,7 +9,7 @@ def search(url):
     content=req.text
     soup=BeautifulSoup(content)
     raw=soup.findAll('script')[3].text
-    page=pandas.read_json(raw.split("window.pageData=")[1],orient='records')
+    page=pandas.read_json(raw.split("window.pageData=")[0],orient='records')
     #Store data
     for item in page.loc['listItems','mods']:
         brand_name.append(item['brandName'])

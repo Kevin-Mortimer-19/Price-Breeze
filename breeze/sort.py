@@ -14,17 +14,3 @@ def distance_calc (x1, y1, x2, y2):
     yFin = (y1*y1) + (y2*y2)
     return sqrt(xFin + yFin)
     
-import json
- 
-# Opening JSON file
-f = open('products.json')
-
-
-# returns JSON object as
-# a dictionary
-data = json.load(f)
-data = sort_great_least_price(data)
-print(data)
-
-# Closing file
-f.close()

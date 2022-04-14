@@ -10,10 +10,4 @@ def scrape_product (product):
     data2 = search(url2 + product)
     dataTotal = data1 + data2
 
-def sort_price_low_high (data):
-    return sort_great_least(data['price'])
-
-def sort_price_high_low (data):
-    return sort_least_great(data['price'])
-
 print(scrape_product(product))
