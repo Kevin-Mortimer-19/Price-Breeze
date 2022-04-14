@@ -8,7 +8,7 @@ import os
 
 
 filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
-filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'results.html')
+filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
 # Opening JSON file
 f = open(filepath,)
 
@@ -20,7 +20,7 @@ def startTable():
     df = pandas.DataFrame(data)
     dfg = df.groupby(['title','category','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
-
+    print("it worked")
     return table
 
 def highTable():
@@ -29,7 +29,7 @@ def highTable():
     df = pandas.DataFrame(data_sorted_greatest)
     dfg = df.groupby(['title','category','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
-
+    print("it worked")
     return table
 
 def lowTable():
@@ -38,7 +38,7 @@ def lowTable():
     df = pandas.DataFrame(data_sorted_lowest)
     dfg = df.groupby(['title','category','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
-
+    print("it worked")
     return table
 
 # Closing file

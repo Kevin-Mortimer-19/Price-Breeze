@@ -75,12 +75,12 @@ def list(request):
 
 def table(request):
 	output = startTable()
-	return HttpResponse(output)
+	return render(request, 'home_page.html', {'data':output})
 
 def tableSortH(request):
 	output = highTable()
-	return HttpResponse(output)
+	return render(request, 'home_page.html', {'data':output})
 
 def tableSortL(request):
 	output = lowTable()
-	return HttpResponse(output)
+	return render(request, 'home_page.html', {'data':output})

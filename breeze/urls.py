@@ -12,7 +12,7 @@ urlpatterns = [
     path("log_in/", views.login, name="login"),
     path("password_reset", views.password_reset_request, name="password_reset"),
     path("list/", views.list, name="list"),
-    path('', views.tableSortH, name="high"),
-    path('', views.tableSortL, name="low"),
-    path('', views.table, name="reset")
+    path("high/", views.tableSortH, name="high"),
+    path("low/", views.tableSortL, name="low"),
+    path("reset/", views.table, name="reset")
 ]
