@@ -1,36 +1,45 @@
-# import library
 from bs4 import BeautifulSoup
-import requests
-import pandas
-# Request to website and download HTML contents
+from requests_html import HTMLSession
+import json
 
 def search(url):
-    req=requests.get(url)
-    content=req.text
-    soup=BeautifulSoup(content)
-    raw=soup.findAll('script')[3].text
-    page=pandas.read_json(raw.split("window.pageData=")[1],orient='records')
-    #Store data
-    for item in page.loc['listItems','mods']:
-        brand_name.append(item['brandName'])
-        price.append(item['price'])
-        location.append(item['location'])
-        description.append(ifnull(item['description'],0))
-        rating_score.append(ifnull(item['ratingScore'],0))
-    #save data into an output
-    output=pandas.DataFrame({'brandName':brand_name,'price':price,'location':location,'description':description,'rating score':rating_score})
-    for i in range(1,50):
-        time.sleep(max(random.gauss(5,1),2))
-        print('page'+str(i))
-        payload['page']=i
-        req=requests.get(url,params=payload)
-        content=req.text
-        soup=BeautifulSoup(content)
-        raw=soup.findAll('script')[3].text
-        page=pandas.read_json(raw.split("window.pageData=")[1],orient='records')
-        for item in page.loc['listItems','mods']:
-            brand_name.append(item['brandName'])
-            price.append(item['price'])
-            location.append(item['location'])
-            description.append(ifnull(item['description'],0))
-            rating_score.append(ifnull(item['ratingScore'],0))
+    s = HTMLSession()
+    source = s.get(url)
+    source.html.render(sleep=2)
+
+    soup = BeautifulSoup(source.text, 'html.parser')
+
+    #grabs productname price andd storename
+    prod_name = soup.find_all('h4', class_='Xjkr3b')
+    prices = soup.find_all('span', class_="a8Pemb OFFNJ")
+    store = soup.find_all('div', class_='aULzUe IuHnof')
+    links = soup.find_all('a', class_="shntl", href=True)
+
+    # print("results: ", store)
+
+    #addding web scraped data to arrays
+    prodArr, priceArr, storeArr, linksArr = [], [], [], []
+
+    for line in prod_name:
+        prodArr.append(line.getText(strip=True))
+
+    for line in prices:
+        priceArr.append(line.getText(strip=True))
+
+    for line in store:
+        storeArr.append(line.getText(strip=True))
+
+    for line in links:
+        for a in links:
+            linksArr.append(a['href'])
+
+    data = [{"prod_name": i, "price": p, "store": s, "link": l}
+            for i, p, s, l in zip(prodArr, priceArr, storeArr, linksArr)]
+    # print(data)
+    # print(json.dumps(data))
+
+    #dump data out to JSON file
+    filename = "products.json"
+
+    with open(filename, 'w') as outfile:
+        json.dump(data, outfile, indent=2)
