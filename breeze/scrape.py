@@ -3,6 +3,7 @@ from requests_html import HTMLSession
 import json
 
 def search(url):
+
     s = HTMLSession()
     source = s.get(url)
     source.html.render(sleep=2)
@@ -43,3 +44,4 @@ def search(url):
 
     with open(filename, 'w') as outfile:
         json.dump(data, outfile, indent=2)
+

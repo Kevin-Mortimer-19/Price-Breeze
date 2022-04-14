@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from breeze.forms import LoginForm, CreateForm
+from breeze.models import ShoppingList, Item
 from django.contrib.auth.forms import UserCreationForm  
 from django.contrib.auth import login
 from django.contrib import messages
@@ -11,12 +12,19 @@ from django.views import generic
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.contrib.auth.forms import PasswordResetForm
+from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.models import User
 from django.template.loader import render_to_string
 from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
+from django.contrib import messages
+
+
+from django.shortcuts import HttpResponse
+from breeze.open_json import *
+
 
 def create_account(request):
     if request.method == "POST":
@@ -39,7 +47,6 @@ def home(request):
     return render(request, "home_page.html")
 
 
-
 def password_reset_request(request):
 	if request.method == "POST":
 		password_reset_form = PasswordResetForm(request.POST)
@@ -49,7 +56,7 @@ def password_reset_request(request):
 			if associated_users.exists():
 				for user in associated_users:
 					subject = "Password Reset Requested"
-					email_template_name = "templates/password/password_reset_email.txt"
+					email_template_name = "password/password_reset_email.txt"
 					c = {
 					"email":user.email,
 					'domain':'127.0.0.1:8000',
@@ -64,8 +71,30 @@ def password_reset_request(request):
 						send_mail(subject, email, 'admin@example.com' , [user.email], fail_silently=False)
 					except BadHeaderError:
 						return HttpResponse('Invalid header found.')
-					return redirect ("accounts/password_reset/done/")
+                    
+					return redirect ("password_reset/done/")
+    
 	password_reset_form = PasswordResetForm()
+
 	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
+
 def list(request):
-    return render(request, "shopping_list.html")
+	list = ShoppingList.objects.get(userid=request.user)
+	items = Item.objects.filter(userid=list)
+	return render(request, "shopping_list.html", {"item_list":items})
+
+def password_change_form(request):
+     form = PasswordChangeForm(request.POST)
+     return render(request, "password_reset_confirm.html")
+    
+def table(request):
+	output = startTable()
+	return render(request, 'home_page.html', {'data':output})
+
+def tableSortH(request):
+	output = highTable()
+	return render(request, 'home_page.html', {'data':output})
+
+def tableSortL(request):
+	output = lowTable()
+	return render(request, 'home_page.html', {'data':output})

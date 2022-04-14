@@ -10,6 +10,7 @@ url = urlPT1 + product + urlPT2
 def scrape_product(product):
     output = search(url)
 
+
 def sort_price_low_high (data):
     return sort_great_least(data['price'])
 
