@@ -26,9 +26,10 @@
 
         <nav class = "navBar">
             <ul>
-                <li> | <a href="{% url 'login'%}">Sign-in</a> | </li>
+                <li><a href="{% url 'login'%}">Sign-in</a> | </li>
                 <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
-                <li><a href="home_page.html">Home</a> | </li>
+                <li><a href="{% url 'home'%}">Home</a> | </li>
+                <li><a href="{% url 'list'%}">Shopping List</a></li>
             </ul>
         </nav>
 
