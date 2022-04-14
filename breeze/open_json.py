@@ -4,9 +4,12 @@ import numpy
 import json
 from breeze.sort import *
 from IPython.display import HTML
+import os
 
+
+filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
 # Opening JSON file
-f = open('products.json')
+f = open(filepath,)
 
 # returns JSON object as
 # a list of dictionaries
