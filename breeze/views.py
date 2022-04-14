@@ -21,6 +21,10 @@ from django.utils.encoding import force_bytes
 from django.contrib import messages
 
 
+from django.shortcuts import HttpResponse
+from breeze.open_json import *
+
+
 def create_account(request):
     if request.method == "POST":
         form = CreateForm(request.POST)
@@ -40,7 +44,6 @@ def log_in(request):
 
 def home(request):
     return render(request, "home_page.html")
-
 
 
 def password_reset_request(request):
@@ -80,3 +83,15 @@ def password_change_form(request):
 
 def list(request):
     return render(request, "shopping_list.html")
+
+def table(request):
+	output = startTable()
+	return HttpResponse(output)
+
+def tableSortH(request):
+	output = highTable()
+	return HttpResponse(output)
+
+def tableSortL(request):
+	output = lowTable()
+	return HttpResponse(output)
