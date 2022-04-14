@@ -15,7 +15,7 @@ data = json.load(f)
 def startTable():
     df = pandas.DataFrame(data)
     dfg = df.groupby(['title','category','price'], sort=False).sum()
-    table = dfg.to_html()
+    table = dfg.to_html('result.html')
 
     return table
 
@@ -24,7 +24,7 @@ def highTable():
     data_sorted_greatest = sort_great_least_price(data)
     df = pandas.DataFrame(data_sorted_greatest)
     dfg = df.groupby(['title','category','price'], sort=False).sum()
-    table = dfg.to_html()
+    table = dfg.to_html('result.html')
 
     return table
 
@@ -33,7 +33,7 @@ def lowTable():
     data_sorted_lowest = sort_least_great_price(data)
     df = pandas.DataFrame(data_sorted_lowest)
     dfg = df.groupby(['title','category','price'], sort=False).sum()
-    table = dfg.to_html()
+    table = dfg.to_html('result.html')
 
     return table
 

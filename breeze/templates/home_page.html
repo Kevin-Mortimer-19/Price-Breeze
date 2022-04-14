@@ -55,9 +55,15 @@
             <input type="text" name="searchInput" placeholder="Search for products..">
             <button type="submit" name="search-button">Search</button>
         </div>
-
     </section>
-
+    
+    <div id = "table">
+         {% include "result.html" %}
+        <button type="submit" name="sort-button">Sort Highest to Lowest</button>
+        <button type="submit" name="sort-button">Sort Lowest to Highest</button>
+        <button type="submit" name="sort-button">Reset</button>
+    </div>
+    
 </body>
 
 </html>

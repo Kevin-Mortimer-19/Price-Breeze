@@ -18,6 +18,10 @@ from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 
+from django.shortcuts import HttpResponse
+from open_json import startTable
+
+
 def create_account(request):
     if request.method == "POST":
         form = CreateForm(request.POST)
@@ -37,7 +41,6 @@ def log_in(request):
 
 def home(request):
     return render(request, "home_page.html")
-
 
 
 def password_reset_request(request):
@@ -69,3 +72,7 @@ def password_reset_request(request):
 	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
 def list(request):
     return render(request, "shopping_list.html")
+
+def table(request):
+	output = startTable()
+	return HttpResponse(output)
