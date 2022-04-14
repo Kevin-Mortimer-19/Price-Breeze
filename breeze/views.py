@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from breeze.forms import LoginForm, CreateForm
+from breeze.forms import LoginForm, CreateForm, addToList
 from breeze.models import ShoppingList, Item
-from django.contrib.auth.forms import UserCreationForm  
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -44,7 +44,16 @@ def log_in(request):
    return render(request, 'login.html')
 
 def home(request):
-    return render(request, "home_page.html")
+	if request.method == "POST":
+		form = addToList(request.POST)
+		if form.is_valid():
+			list = ShoppingList.objects.get(userid=request.user)
+			name = request.POST.get('item')
+			item = Item(userid=list, item_name=name, item_id = 1)
+			item.save()
+	else:
+		form = addToList()
+	return render(request, "home_page.html", {"form":form})
 
 
 def password_reset_request(request):
