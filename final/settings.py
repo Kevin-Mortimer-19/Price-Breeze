@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'breeze.apps.BreezeConfig',
+    'crispy_forms'
 ]
 
+CRISPY_TEMPLATE_PACK = 'uni_form' 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,3 +128,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/home/"
+
+
+# Used to send the email to the CLI.
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
