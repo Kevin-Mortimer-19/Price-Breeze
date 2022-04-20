@@ -3,23 +3,21 @@
 {% block content %}
     <header>
         <h1>price breeze</h1>
+        {% if user.is_authenticated %}
+        <h3> Welcome to your shopping list, {{ user.get_username }} </h3>
+        {% endif %}
         
         <nav class = "navBar">
             <ul>
-                <li><a href="{% url 'login'%}">Sign-in</a> | </li>
-                <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
-                <li><a href="{% url 'home'%}">Home</a> | </li>
-                <li><a href="{% url 'list'%}">Shopping List</a></li>
+                <li><a href="signin.html">Sign-in</a> | </li>
+                <li><a href="createAcc.html">Create Account</a> | </li>
+                <li><a href="Home.html">Home</a></li>
             </ul>
         </nav>
     </header>
-    
-    {% if user.is_authenticated %}
-    <p> Welcome to your shopping list, {{ user.get_username }}. </p>
-    {% endif %}
-    {% for item in item_list %}
-        <li>{{ item.item_name }}</li>
-    {% endfor %}
+    <p>
+        This is where the shopping list will appear.
+    </p>
 {% endblock %}
 
 </html>
