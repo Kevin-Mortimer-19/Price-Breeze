@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from breeze.forms import LoginForm, CreateForm, addToList
-from breeze.models import ShoppingList, Item
-from django.contrib.auth.forms import UserCreationForm
+from breeze.forms import LoginForm, CreateForm
+from django.contrib.auth.forms import UserCreationForm  
 from django.contrib.auth import login
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -22,17 +21,11 @@ from django.utils.encoding import force_bytes
 from django.contrib import messages
 
 
-from django.shortcuts import HttpResponse
-from breeze.open_json import *
-
-
 def create_account(request):
     if request.method == "POST":
         form = CreateForm(request.POST)
         if form.is_valid():
             user = form.save()
-            list = ShoppingList(userid=user)
-            list.save()
             login(request, user)
             messages.success(request, "Account created.")
             return redirect("home")
@@ -46,16 +39,8 @@ def log_in(request):
    return render(request, 'login.html')
 
 def home(request):
-	if request.method == "POST":
-		form = addToList(request.POST)
-		if form.is_valid():
-			list = ShoppingList.objects.get(userid=request.user)
-			name = request.POST.get('item')
-			item = Item(userid=list, item_name=name, item_id = 1)
-			item.save()
-	else:
-		form = addToList()
-	return render(request, "home_page.html", {"form":form})
+    return render(request, "home_page.html")
+
 
 
 def password_reset_request(request):
@@ -86,26 +71,12 @@ def password_reset_request(request):
 					return redirect ("password_reset/done/")
     
 	password_reset_form = PasswordResetForm()
-
-	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
-
-def list(request):
-	list = ShoppingList.objects.get(userid=request.user)
-	items = Item.objects.filter(userid=list)
-	return render(request, "shopping_list.html", {"item_list":items})
+	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
 
 def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
     
-def table(request):
-	output = startTable()
-	return render(request, 'home_page.html', {'data':output})
 
-def tableSortH(request):
-	output = highTable()
-	return render(request, 'home_page.html', {'data':output})
-
-def tableSortL(request):
-	output = lowTable()
-	return render(request, 'home_page.html', {'data':output})
+def list(request):
+    return render(request, "shopping_list.html")
