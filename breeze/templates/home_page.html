@@ -26,10 +26,9 @@
 
         <nav class = "navBar">
             <ul>
-                <li><a href="{% url 'login'%}">Sign-in</a> | </li>
+                <li> | <a href="{% url 'login'%}">Sign-in</a> | </li>
                 <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
-                <li><a href="{% url 'home'%}">Home</a> | </li>
-                <li><a href="{% url 'list'%}">Shopping List</a></li>
+                <li><a href="home_page.html">Home</a> | </li>
             </ul>
         </nav>
 
@@ -56,20 +55,9 @@
             <input type="text" name="searchInput" placeholder="Search for products..">
             <button type="submit" name="search-button">Search</button>
         </div>
+
     </section>
-    
-    <div id = "table">
-         {% include "result.html" %}
-        <button onclick="location.href='{%url 'high'%}'"type="button">Sort Highest to Lowest</button>
-        <button onclick="location.href='{%url 'low'%}'"type="button">Sort Lowest to Highest</button>
-        <button onclick="location.href='{%url 'reset'%}'"type="button">Reset</button>
-    </div>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-</form>
-    
+
 </body>
 
 </html>
