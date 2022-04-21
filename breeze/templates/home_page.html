@@ -59,7 +59,11 @@
     </section>
     
     <div id = "table">
-         {% include "result.html" %}
+         <!--{% include "result.html" %}-->
+         <table border="1" class="dataframe">
+         {% include "item_table_headers.html" %}
+         {% include "item_table_entry.html" %} 
+        </table>
         <button onclick="location.href='{%url 'high'%}'"type="button">Sort Highest to Lowest</button>
         <button onclick="location.href='{%url 'low'%}'"type="button">Sort Lowest to Highest</button>
         <button onclick="location.href='{%url 'reset'%}'"type="button">Reset</button>

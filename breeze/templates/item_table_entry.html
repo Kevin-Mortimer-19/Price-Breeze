@@ -1,0 +1,13 @@
+{% for item in results %}
+    <tr>
+        <td>{{ item.title }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.location }}</td>
+        <td> 
+            <form>
+                <input type="button" value="Add to Shopping List">
+            </form>
+        </td>
+    </tr>
+{% endfor %}
