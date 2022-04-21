@@ -6,7 +6,7 @@ def search(url):
 
     s = HTMLSession()
     source = s.get(url)
-    source.html.render(sleep=2)
+    # source.html.render(sleep=10)
 
     soup = BeautifulSoup(source.text, 'html.parser')
 

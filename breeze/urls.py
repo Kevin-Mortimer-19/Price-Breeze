@@ -14,6 +14,5 @@ urlpatterns = [
     path("list/", views.list, name="list"),
     path("high/", views.tableSortH, name="high"),
     path("low/", views.tableSortL, name="low"),
-    path("reset/", views.table, name="reset"),
-    path("search_results/", views.searchProd, name="search_results")
+    path("reset/", views.table, name="reset")
 ]

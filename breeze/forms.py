@@ -164,9 +164,10 @@ class PasswordChangeForm(forms.Form):
                 code='password_incorrect',
             )
         return old_password
+    
+class searchFor(forms.Form):
+    product = forms.CharField(max_length=100)
+    
 
-class addToList(forms.Form):
-    item = forms.CharField(max_length=100)
-    
-# class searchFrom(forms.Form):
-    
+# class addToList(forms.Form):
+#     item = forms.CharField(max_length=100)
