@@ -46,5 +46,6 @@ def search(url):
 
     with open(filename, 'w') as outfile:
         json.dump(data, outfile, indent=2)
+        updateTable()
 
-    updateTable()
+    
