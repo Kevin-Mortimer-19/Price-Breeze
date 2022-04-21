@@ -135,6 +135,7 @@ class PasswordResetForm(forms.Form):
                 subject_template_name, email_template_name, context, from_email,
                 user_email, html_email_template_name=html_email_template_name,
             )
+
 class PasswordChangeForm(forms.Form):
     """
     A form that lets a user change their password by entering their old
@@ -166,3 +167,6 @@ class PasswordChangeForm(forms.Form):
 
 class addToList(forms.Form):
     item = forms.CharField(max_length=100)
+    
+# class searchFrom(forms.Form):
+    

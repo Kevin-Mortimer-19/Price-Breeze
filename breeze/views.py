@@ -24,6 +24,7 @@ from django.contrib import messages
 
 from django.shortcuts import HttpResponse
 from breeze.open_json import *
+from breeze.shops import *
 
 
 def create_account(request):
@@ -56,7 +57,6 @@ def home(request):
 	else:
 		form = addToList()
 	return render(request, "home_page.html", {"form":form})
-
 
 def password_reset_request(request):
 	if request.method == "POST":
@@ -109,3 +109,26 @@ def tableSortH(request):
 def tableSortL(request):
 	output = lowTable()
 	return render(request, 'home_page.html', {'data':output})
+
+def searchProd(request, id=None):
+    
+    # searchObj = None
+    # print(request)
+    # query = request.GET
+    print('inside searchprod view')
+    productItem = getInput(request)
+    print('grabbed input: %s', productItem)
+    scrape_product(productItem)
+    print('scrapped product')
+    
+    
+    # searchObj = search.objects.get(id=query)
+    # context = {}
+    return render(request, "home_page.html")
+
+
+    # searchInput = searchForm(request.POST)
+    # return render(request, "homepage.html")
+    
+    # searchInput = forms.CharField(max_length=100)
+    
