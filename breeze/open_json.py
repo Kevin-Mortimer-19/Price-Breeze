@@ -18,39 +18,28 @@ data = json.load(f)
 
 def startTable():
     df = pandas.DataFrame(data)
-    return printTable(df)
-    #dfg = df.groupby(['title','category','price'], sort=False).sum()
-    #table = dfg.to_html(filepath2,)
-
-    #return table
+    dfg = df.groupby(['title','category','price'], sort=False).sum()
+    table = dfg.to_html(filepath2,)
+    print("it worked")
+    return table
 
 def highTable():
 #sorted data by price highest to lowest 
     data_sorted_greatest = sort_great_least_price(data)
     df = pandas.DataFrame(data_sorted_greatest)
-    return printTable(df)
-    #dfg = df.groupby(['title','category','price'], sort=False).sum()
-    #table = dfg.to_html(filepath2,)
-
-    #return table
+    dfg = df.groupby(['title','category','price'], sort=False).sum()
+    table = dfg.to_html(filepath2,)
+    print("it worked")
+    return table
 
 def lowTable():
 #sorted data by price lowest to highest 
     data_sorted_lowest = sort_least_great_price(data)
     df = pandas.DataFrame(data_sorted_lowest)
-    return printTable(df)
-    #dfg = df.groupby(['title','category','price'], sort=False).sum()
-    #table = dfg.to_html(filepath2,)
-
-    #return table
-
-
-def printTable(df):
     dfg = df.groupby(['title','category','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
-
+    print("it worked")
     return table
-
 
 # Closing file
 f.close()
