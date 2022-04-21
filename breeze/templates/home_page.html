@@ -64,6 +64,11 @@
         <button onclick="location.href='{%url 'low'%}'"type="button">Sort Lowest to Highest</button>
         <button onclick="location.href='{%url 'reset'%}'"type="button">Reset</button>
     </div>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+</form>
     
 </body>
 
