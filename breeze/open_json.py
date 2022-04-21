@@ -16,6 +16,10 @@ f = open(filepath,)
 # a list of dictionaries
 data = json.load(f)
 
+def updateTable():
+    f = open(filepath,)
+    data = json.load(f)
+
 def startTable():
     df = pandas.DataFrame(data)
     return printTable(df)
@@ -24,7 +28,7 @@ def startTable():
 
     #return table
 
-def highTable():
+def highTablePrice():
 #sorted data by price highest to lowest 
     data_sorted_greatest = sort_great_least_price(data)
     df = pandas.DataFrame(data_sorted_greatest)
@@ -34,9 +38,49 @@ def highTable():
 
     #return table
 
-def lowTable():
+def lowTablePrice():
 #sorted data by price lowest to highest 
     data_sorted_lowest = sort_least_great_price(data)
+    df = pandas.DataFrame(data_sorted_lowest)
+    return printTable(df)
+    #dfg = df.groupby(['title','category','price'], sort=False).sum()
+    #table = dfg.to_html(filepath2,)
+
+    #return table
+
+def highTableName():
+#sorted data by price highest to lowest 
+    data_sorted_greatest = sort_great_least_product_name(data)
+    df = pandas.DataFrame(data_sorted_greatest)
+    return printTable(df)
+    #dfg = df.groupby(['title','category','price'], sort=False).sum()
+    #table = dfg.to_html(filepath2,)
+
+    #return table
+
+def lowTableName():
+#sorted data by price lowest to highest 
+    data_sorted_lowest = sort_least_great_product_name(data)
+    df = pandas.DataFrame(data_sorted_lowest)
+    return printTable(df)
+    #dfg = df.groupby(['title','category','price'], sort=False).sum()
+    #table = dfg.to_html(filepath2,)
+
+    #return table
+
+def highTableStore():
+#sorted data by price highest to lowest 
+    data_sorted_greatest = sort_great_least_store(data)
+    df = pandas.DataFrame(data_sorted_greatest)
+    return printTable(df)
+    #dfg = df.groupby(['title','category','price'], sort=False).sum()
+    #table = dfg.to_html(filepath2,)
+
+    #return table
+
+def lowTableStore():
+#sorted data by price lowest to highest 
+    data_sorted_lowest = sort_least_great_store(data)
     df = pandas.DataFrame(data_sorted_lowest)
     return printTable(df)
     #dfg = df.groupby(['title','category','price'], sort=False).sum()

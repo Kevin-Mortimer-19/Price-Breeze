@@ -31,8 +31,6 @@ def create_account(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             user = form.save()
-            list = ShoppingList(userid=user)
-            list.save()
             login(request, user)
             messages.success(request, "Account created.")
             return redirect("home")
@@ -87,7 +85,7 @@ def password_reset_request(request):
     
 	password_reset_form = PasswordResetForm()
 
-	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
+	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
 
 def list(request):
 	list = ShoppingList.objects.get(userid=request.user)
@@ -102,10 +100,26 @@ def table(request):
 	output = startTable()
 	return render(request, 'home_page.html', {'data':output})
 
-def tableSortH(request):
-	output = highTable()
+def tableSortHPrice(request):
+	output = highTablePrice()
 	return render(request, 'home_page.html', {'data':output})
 
-def tableSortL(request):
-	output = lowTable()
+def tableSortLPrice(request):
+	output = lowTablePrice()
+	return render(request, 'home_page.html', {'data':output})
+
+def tableSortHName(request):
+	output = highTableName()
+	return render(request, 'home_page.html', {'data':output})
+
+def tableSortLName(request):
+	output = lowTableName()
+	return render(request, 'home_page.html', {'data':output})
+
+def tableSortHStore(request):
+	output = highTableStore()
+	return render(request, 'home_page.html', {'data':output})
+
+def tableSortLStore(request):
+	output = lowTableStore()
 	return render(request, 'home_page.html', {'data':output})

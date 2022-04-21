@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
+from breeze.open_json import *
 import json
 
 def search(url):
@@ -41,7 +42,9 @@ def search(url):
 
     #dump data out to JSON file
     filename = "products.json"
+    
 
     with open(filename, 'w') as outfile:
         json.dump(data, outfile, indent=2)
 
+    updateTable()

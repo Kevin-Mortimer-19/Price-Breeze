@@ -9,8 +9,14 @@ def sort_great_least_price (array):
 def sort_least_great_price (array):
      return sorted(array, key=lambda x:x['price'])
 
-def distance_calc (x1, y1, x2, y2):
-    xFin = (x1*x1) + (x2*x2)
-    yFin = (y1*y1) + (y2*y2)
-    return sqrt(xFin + yFin)
-    
+def sort_great_least_product_name (array):
+    return sorted(array, key=lambda x:x['prod_name'], reverse=True)
+
+def sort_least_great_product_name (array):
+     return sorted(array, key=lambda x:x['prod_name'])
+
+def sort_great_least_store (array):
+    return sorted(array, key=lambda x:x['store'], reverse=True)
+
+def sort_least_great_store (array):
+     return sorted(array, key=lambda x:x['store'])
