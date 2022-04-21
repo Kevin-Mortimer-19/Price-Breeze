@@ -110,26 +110,3 @@ def tableSortH(request):
 def tableSortL(request):
 	output = lowTable()
 	return render(request, 'home_page.html', {'data':output})
-
-def searchProd(request, id=None):
-    
-    # searchObj = None
-    # print(request)
-    # query = request.GET
-    print('inside searchprod view')
-    productItem = getInput(request)
-    print('grabbed input: %s', productItem)
-    scrape_product(productItem)
-    print('scrapped product')
-    
-    
-    # searchObj = search.objects.get(id=query)
-    # context = {}
-    return render(request, "home_page.html")
-
-
-    # searchInput = searchForm(request.POST)
-    # return render(request, "homepage.html")
-    
-    # searchInput = forms.CharField(max_length=100)
-    
