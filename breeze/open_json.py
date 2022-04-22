@@ -3,7 +3,7 @@ import pandas
 import numpy
 import json
 from breeze.sort import *
-from IPython.display import HTML
+#from IPython.display import HTML
 from breeze.item import Item
 import os
 

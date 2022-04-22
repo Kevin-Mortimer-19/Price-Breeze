@@ -180,3 +180,6 @@ class PasswordChangeForm(forms.Form):
 
 class addToList(forms.Form):
     item = forms.CharField(max_length=100)
+    
+class UserProfileForm(forms.Form):
+    user = forms.CharField(max_length=100)
