@@ -37,9 +37,8 @@ def create_account(request):
         else:
             messages.error(request, "Account creation failed again.")
     else:
-        form = CreateForm()	
-        search_results = startTableAlt()
-    return render(request, "home_page.html", {"form":form, "results": search_results})
+        form = CreateForm()
+    return render(request, 'account_creation.html', {'form':form})
 
 def log_in(request):
    return render(request, 'login.html')
@@ -54,7 +53,8 @@ def home(request):
 			item.save()
 	else:
 		form = addToList()
-	return render(request, "home_page.html", {"form":form})
+		output = startTable()
+	return render(request, "home_page.html", {"form":form, 'results':output})
 
 
 def password_reset_request(request):
@@ -104,39 +104,39 @@ def password_change_form(request):
 def table(request):
 #initial table
 	output = startTable()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
 #price tables
 def tableSortHPrice(request):
 #most to least
 	output = highTablePrice()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
 def tableSortLPrice(request):
 #least to most
 	output = lowTablePrice()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
 
 #product name tables
 def tableSortHName(request):
 #Z to A
 	output = highTableName()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
 def tableSortLName(request):
 #A to Z
 	output = lowTableName()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
 
 #store name tables
 def tableSortHStore(request):
 #Z to A
 	output = highTableStore()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
 def tableSortLStore(request):
 #A to Z
 	output = lowTableStore()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})

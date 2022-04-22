@@ -63,7 +63,7 @@ def lowTableStore():
     df = pandas.DataFrame(data_sorted_lowest)
     return printTable(df)
 
-def printTable(df):
+def printTableAlt(df):
 #prints any dataframe to html table
     dfg = df.groupby(['prod_name','store','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
@@ -72,15 +72,15 @@ def printTable(df):
 
 def startTableAlt():
     df = pandas.DataFrame(data)
-    return printTableAlt(df)
+    return printTable(df)
 
-def printTableAlt(df):
+def printTable(df):
 
     results = []
     for index in df.index:
         #entry = Item(row['title'], row['price'], row['description'], row['location'])
         #entry = Item(df['title'][index], df['price'][index], df['description'][index], df['location'][index])
-        entry = Item(df['title'][index], df['price'][index], df['description'][index], "sample location")
+        entry = Item(df['prod_name'][index], df['price'][index], df['description'][index], df['store'][index])
         results.append(entry)
     return results
     #for ind in df.index:
