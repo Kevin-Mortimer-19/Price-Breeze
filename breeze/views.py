@@ -27,6 +27,9 @@ from breeze.open_json import *
 from breeze.shops import *
 
 
+# View for creating an account
+# Defines the response to form submission and renders the page
+
 def create_account(request):
     if request.method == "POST":
         form = CreateForm(request.POST)
@@ -46,18 +49,10 @@ def create_account(request):
 def log_in(request):
    return render(request, 'login.html')
 
+# View for the home/search page
+# defines responses to search inputs and add button interactions
+
 def home(request):
-	#if request.method == "POST":
-		#form = addToList(request.POST)
-		#if form.is_valid():
-			#list = ShoppingList.objects.get(userid=request.user)
-			#name = request.POST.get('item')
-			#item = Item(userid=list, item_name=name, item_id = 1)
-			#item.save()
-	#else:
-		#form = addToList()
-		#output = startTable()
-	#return render(request, "home_page.html", {"form":form, 'results':output})
 	form = searchFor()
 	if request.method == "POST":
     		# searchRes(request)
@@ -116,13 +111,10 @@ def password_reset_request(request):
 
 	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
 
+# View for handling the shopping list page
+# Handles a form submission from the search page, and displays a User's ShoppingList
+
 def list(request):
-		#form = addToList(request.POST)
-		#if form.is_valid():
-		#list = ShoppingList.objects.get(userid=request.user)
-		#name = request.POST.get('item')
-		#item = Item(userid=list, item_name=name, item_id = 1)
-		#item.save()	
 	list = ShoppingList.objects.get(userid=request.user)
 	if request.method == "POST":
 		name = request.POST.get('title')
@@ -182,7 +174,3 @@ def tableSortLStore(request):
 #A to Z
 	output = lowTableStore()
 	return render(request, 'home_page.html', {'results':output})
-
-# def searchRes(request):
-
-# 	return render(request, "home_page.html", {'form':form})
