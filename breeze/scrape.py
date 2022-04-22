@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
+from breeze.open_json import *
 import json
 import os
 from breeze.open_json import *

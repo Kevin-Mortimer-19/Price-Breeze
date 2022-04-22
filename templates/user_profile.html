@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %} 
+  
+  <!--User Profile Page-->
+
+    <div class="row my-3 p-3">
+     <header>
+        <br/>
+        <h1>price breeze</h1>
+        <br/>
+        
+        <nav class = "navBar">
+            <ul>
+                <li>|   <a href="{% url 'login'%}">Sign-in</a> | </li>
+                <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
+                <li><a href="{% url 'home'%}">Home</a> | </li>
+                <li><a href="{% url 'list'%}">Shopping List</a> |  </li>
+                <li><a href="{% url 'user_profile_view'%}">Profile</a>  |   </li>
+            </ul>
+        </nav>
+        <br/>
+
+    </header>
+
+    <section class = "backgroundArea">
+            <ul class = "circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </section>
+
+        <h1>This is the profile page for </h1>
+               <h2> {{user.username}}</h2>
+               
+        <p>First Name: {{user.first_name}}</p>
+        
+        <p>Last Name: {{user.last_name}}</p>
+        
+        <p>Email: {{user.email}}</p>
+        
+    </div>
+
+{% endblock %}
+

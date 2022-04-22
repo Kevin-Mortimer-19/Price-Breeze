@@ -26,10 +26,11 @@
 
         <nav class = "navBar">
             <ul>
-                <li><a href="{% url 'login'%}">Sign-in</a> | </li>
+                <li>|   <a href="{% url 'login'%}">Sign-in</a> | </li>
                 <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
                 <li><a href="{% url 'home'%}">Home</a> | </li>
-                <li><a href="{% url 'list'%}">Shopping List</a></li>
+                <li><a href="{% url 'list'%}">Shopping List</a> |  </li>
+                <li><a href="{% url 'user_profile_view'%}">Profile</a>  |   </li>
             </ul>
         </nav>
 
@@ -63,12 +64,20 @@
     </section>
     
     <div id = "table">
-         {% include "result.html" %}
-        <button onclick="location.href='{%url 'high'%}'"type="button">Sort Highest to Lowest</button>
-        <button onclick="location.href='{%url 'low'%}'"type="button">Sort Lowest to Highest</button>
-        <button onclick="location.href='{%url 'reset'%}'"type="button">Reset</button>
+         <!--{% include "result.html" %}-->
+         <table border="1" class="dataframe">
+         {% include "item_table_headers.html" %}
+         {% include "item_table_entry.html" %} 
+        </table>
+
+        <button onclick="location.href='{%url 'highPrice'%}'"type="button">Sort Highest to Lowest by Price</button>
+        <button onclick="location.href='{%url 'lowPrice'%}'"type="button">Sort Lowest to Highest by Price</button>
+        <button onclick="location.href='{%url 'lowName'%}'"type="button">Sort A-Z by Product Name</button>
+        <button onclick="location.href='{%url 'highName'%}'"type="button">Sort Z-A by Product Name</button>
+        <button onclick="location.href='{%url 'lowStore'%}'"type="button">Sort A-Z by Store Name</button>
+        <button onclick="location.href='{%url 'highStore'%}'"type="button">Sort Z-A by Store Name</button>
+        <button onclick="location.href='{%url 'reset'%}'"type="button">Reset Results (Display by Relevance)</button>
     </div>
-    
 </body>
 
 </html>

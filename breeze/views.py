@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from breeze.forms import *
+from breeze.forms import LoginForm, CreateForm, addToList, UserProfileForm
 from breeze.models import ShoppingList, Item
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -47,17 +47,28 @@ def log_in(request):
    return render(request, 'login.html')
 
 def home(request):
+	#if request.method == "POST":
+		#form = addToList(request.POST)
+		#if form.is_valid():
+			#list = ShoppingList.objects.get(userid=request.user)
+			#name = request.POST.get('item')
+			#item = Item(userid=list, item_name=name, item_id = 1)
+			#item.save()
+	#else:
+		#form = addToList()
+		#output = startTable()
+	#return render(request, "home_page.html", {"form":form, 'results':output})
 	if request.method == "POST":
-		form = searchFor(request.POST)
-		if form.is_valid():
-			print('inside home func')
-			productItem = request.POST.get('product')
-			print('grabbed input: %s', productItem)
-			scrape_product(productItem)
-			print('scrapped product')
-	else:
-		form = searchFor()
-	return render(request, "home_page.html", {"form":form})
+
+		if 'add_to_list' in request.POST:
+			list = ShoppingList.objects.get(userid=request.user)
+			name = request.POST.get('title')
+			this_price = request.POST.get('price')
+			this_location = request.POST.get('location')
+			new_item = Item(userid=list, item_name=name, item_id = 1, location=this_location, price=this_price)
+			new_item.save()
+	output = startTable()
+	return render(request, "home_page.html", {'results':output})
 
 def password_reset_request(request):
 	if request.method == "POST":
@@ -91,36 +102,67 @@ def password_reset_request(request):
 	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
 
 def list(request):
+		#form = addToList(request.POST)
+		#if form.is_valid():
+		#list = ShoppingList.objects.get(userid=request.user)
+		#name = request.POST.get('item')
+		#item = Item(userid=list, item_name=name, item_id = 1)
+		#item.save()	
 	list = ShoppingList.objects.get(userid=request.user)
+	if request.method == "POST":
+		name = request.POST.get('title')
+		new_item = Item(userid=list, item_name=name, item_id = 1)
+		new_item.save()
 	items = Item.objects.filter(userid=list)
 	return render(request, "shopping_list.html", {"item_list":items})
 
 def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
-    
+
+def user_profile_view(request):
+     user_profile_form = UserProfileForm(request.POST)
+     return render(request, "user_profile.html",{'user_profile_form':user_profile_form})
+
+#table output views for sorting urls
+
+
 def table(request):
+#initial table
 	output = startTable()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
-def tableSortH(request):
-	output = highTable()
-	return render(request, 'home_page.html', {'data':output})
+#price tables
+def tableSortHPrice(request):
+#most to least
+	output = highTablePrice()
+	return render(request, 'home_page.html', {'results':output})
 
-def tableSortL(request):
-	output = lowTable()
-	return render(request, 'home_page.html', {'data':output})
+def tableSortLPrice(request):
+    #least to most
+	output = lowTablePrice()
+	return render(request, 'home_page.html', {'results':output})
 
 
-def searchRes(request):
-	if request.method == "POST":
-		form = searchFor(request.POST)
-		if form.is_valid():
-			print('inside home func')
-			productItem = request.POST.get('product')
-			print('grabbed input: %s', productItem)
-			scrape_product(productItem)
-			print('scrapped product')
-	else:
-		form = searchFor()
-	return render(request, "search_results.html")
+#product name tables
+def tableSortHName(request):
+#Z to A
+	output = highTableName()
+	return render(request, 'home_page.html', {'results':output})
+
+def tableSortLName(request):
+#A to Z
+	output = lowTableName()
+	return render(request, 'home_page.html', {'results':output})
+
+
+#store name tables
+def tableSortHStore(request):
+#Z to A
+	output = highTableStore()
+	return render(request, 'home_page.html', {'results':output})
+
+def tableSortLStore(request):
+#A to Z
+	output = lowTableStore()
+	return render(request, 'home_page.html', {'results':output})
