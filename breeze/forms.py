@@ -34,6 +34,8 @@ def _unicode_ci_compare(s1, s2):
     """
     return unicodedata.normalize('NFKC', s1).casefold() == unicodedata.normalize('NFKC', s2).casefold()
 
+# Form for logging in with an existing account
+
 class LoginForm(forms.Form):
    user = forms.CharField(max_length=100)
    password = forms.CharField(widget=forms.PasswordInput())
@@ -47,6 +49,7 @@ class LoginForm(forms.Form):
          raise forms.ValidationError("User does not exist in the database")
       return username
 
+# Form for creating a new account
 
 class CreateForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -181,9 +184,6 @@ class PasswordChangeForm(forms.Form):
     
 class searchFor(forms.Form):
     product = forms.CharField(max_length=100)
-    
-class addToList(forms.Form):
-    item = forms.CharField(max_length=100)
     
 # form to be used for user input on the user profile page/ currently not in use
 class UserProfileForm(forms.Form):

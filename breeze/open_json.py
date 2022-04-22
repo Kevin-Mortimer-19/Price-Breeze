@@ -3,20 +3,15 @@ import pandas
 import numpy
 import json
 from breeze.sort import *
-
-#from IPython.display import HTML
 from breeze.item import SingleItem
-
 import os
-
 
 filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
 filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
 data = [  { "prod_name": "  ", "price": "" , "store": "" }]
 
 def openJSON():
-    # if(filepath.exists):
-        # Opening JSON file
+    # Opening JSON file
     f = open(filepath,)
 
     # returns JSON object as
@@ -80,21 +75,10 @@ def printTableAlt(df):
 
     return table
 
-def startTableAlt():
-    df = pandas.DataFrame(data)
-    return printTable(df)
-
 def printTable(df):
-
+#creates array of SingleItem objects to pass as context to the search page template
     results = []
     for index in df.index:
-        #entry = Item(row['title'], row['price'], row['location'])
-        #entry = Item(df['title'][index], df['price'][index], df['description'ndex], df['location'][index])
         entry = SingleItem(df['prod_name'][index], df['price'][index], df['store'][index])
         results.append(entry)
     return results
-    #for ind in df.index:
-     #print(df['Name'][ind], df['Stream'][ind])
-
-# Closing file
-# f.close()
