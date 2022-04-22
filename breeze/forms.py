@@ -50,6 +50,13 @@ class LoginForm(forms.Form):
 
 class CreateForm(UserCreationForm):
     email = forms.EmailField(required=True)
+    first_name = forms.CharField(required=True, label="First Name:")
+    last_name = forms.CharField(required=True, label="Last Name:")
+    
+    class Meta:
+        model = User
+        fields = ('email', 'username', 'first_name',
+                  'last_name', 'password1', 'password2')
 
     def clean_message(self):
         username = self.cleaned_data.get("username")
@@ -62,6 +69,11 @@ class CreateForm(UserCreationForm):
     def save(self, commit=True):
         user = super(CreateForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]
+        
+        user.full_name = '{}.{}'.format(
+            self.cleaned_data['last_name'],
+            self.cleaned_data['first_name']
+        )
         if commit:
             user.save()
         return user
