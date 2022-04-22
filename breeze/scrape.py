@@ -29,8 +29,9 @@ def search(url):
 
     for line in prices:
         priceVal = line.getText(strip=True)
-        priceNum = float(priceVal.replace("$",""))
-        priceArr.append(priceNum)
+        priceNum1 = priceVal.replace("$","")
+        priceNum2 = float(priceNum1.replace(",", ""))
+        priceArr.append(priceNum2)
 
     for line in store:
         storeArr.append(line.getText(strip=True))
