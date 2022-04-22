@@ -110,3 +110,17 @@ def tableSortH(request):
 def tableSortL(request):
 	output = lowTable()
 	return render(request, 'home_page.html', {'data':output})
+
+
+def searchRes(request):
+	if request.method == "POST":
+		form = searchFor(request.POST)
+		if form.is_valid():
+			print('inside home func')
+			productItem = request.POST.get('product')
+			print('grabbed input: %s', productItem)
+			scrape_product(productItem)
+			print('scrapped product')
+	else:
+		form = searchFor()
+	return render(request, "search_results.html")
