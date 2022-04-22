@@ -88,13 +88,13 @@ def printTable(df):
 
     results = []
     for index in df.index:
-        #entry = Item(row['title'], row['price'], row['description'], row['location'])
-        #entry = Item(df['title'][index], df['price'][index], df['description'][index], df['location'][index])
-        entry = SingleItem(df['prod_name'][index], df['price'][index], df['description'][index], df['store'][index])
+        #entry = Item(row['title'], row['price'], row['location'])
+        #entry = Item(df['title'][index], df['price'][index], df['description'ndex], df['location'][index])
+        entry = SingleItem(df['prod_name'][index], df['price'][index], df['store'][index])
         results.append(entry)
     return results
     #for ind in df.index:
      #print(df['Name'][ind], df['Stream'][ind])
 
 # Closing file
-f.close()
+# f.close()

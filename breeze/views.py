@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from breeze.forms import LoginForm, CreateForm, addToList, UserProfileForm
+from breeze.forms import *
 from breeze.models import ShoppingList, Item
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -58,8 +58,9 @@ def home(request):
 		#form = addToList()
 		#output = startTable()
 	#return render(request, "home_page.html", {"form":form, 'results':output})
+	form = searchFor()
 	if request.method == "POST":
-
+    		# searchRes(request)
 		if 'add_to_list' in request.POST:
 			list = ShoppingList.objects.get(userid=request.user)
 			name = request.POST.get('title')
@@ -67,8 +68,19 @@ def home(request):
 			this_location = request.POST.get('location')
 			new_item = Item(userid=list, item_name=name, item_id = 1, location=this_location, price=this_price)
 			new_item.save()
+		
+		if 'searchInput' in request.POST:
+			form = searchFor(request.POST)
+			if form.is_valid():
+				print('inside home func')
+				productItem = request.POST.get('product')
+				print('grabbed input: %s', productItem)
+				scrape_product(productItem)
+				print('scrapped product')
+		else:
+			form = searchFor()
 	output = startTable()
-	return render(request, "home_page.html", {'results':output})
+	return render(request, "home_page.html", {'results': output, 'form': form})
 
 def password_reset_request(request):
 	if request.method == "POST":
@@ -166,3 +178,7 @@ def tableSortLStore(request):
 #A to Z
 	output = lowTableStore()
 	return render(request, 'home_page.html', {'results':output})
+
+# def searchRes(request):
+
+# 	return render(request, "home_page.html", {'form':form})

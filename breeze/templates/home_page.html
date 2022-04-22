@@ -57,13 +57,13 @@
             <form method = "POST">
                 {% csrf_token %}
                 {{ form }}
-                {% comment %} <input type="submit" value="Submit"> {% endcomment %}
-                <button onclick="location.href='{%url 'search_results_req'%}'"type="submit" value="Submit">Submit</button>
+                <input type="submit" value="Submit" name = "searchInput">
+                {% comment %} <button onclick="location.href='{%url 'search_results_req'%}'"type="submit" value="Submit">Submit</button> {% endcomment %}
             </form>
         </div>
     </section>
     
-    <div id = "table">
+    <div id = "table" >
          <!--{% include "result.html" %}-->
          <table border="1" class="dataframe">
          {% include "item_table_headers.html" %}

@@ -11,7 +11,7 @@ urlpatterns = [
     path("home/", views.home, name="home"),
     path("log_in/", views.login, name="login"),
     path("password_reset", views.password_reset_request, name="password_reset_request"),
-    path('search_results', views.searchRes, name="search_results_req"),
+    # path('search_results', views.home, name="search_results_req"),
     path("list/", views.list, name="list"),
 
     #sorting urls
