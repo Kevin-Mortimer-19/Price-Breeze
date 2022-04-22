@@ -52,8 +52,26 @@ Price Breeze is a web application designed to make trips to the grocery store mo
 
 ### Run
 
+#### Running the Server
 
+1. Navigate to the project's root directory in a terminal.
+2. Run the following command to run the server:
+```python
+python manage.py runserver
+```
+3. Open the web page with the URL listed.
 
+#### Admin Page
+1. Run the server.
+2. Navigate to the admin URL With default settings, the admin URL will be as follows:  
+<http://127.0.0.1:8000/admin/>
+3. Log in with the pre-existing admin credentials:
+   - Username: superuser
+   - Password: root  
+4. Alternatively, create your own admin account with the following command:
+```console
+python manage.py createsuperuser
+```
 
 ## Demo video
 
