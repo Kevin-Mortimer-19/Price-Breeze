@@ -49,20 +49,22 @@ class LoginForm(forms.Form):
 
 
 class CreateForm(UserCreationForm):
+    email = forms.EmailField(required=True)
 
-   def clean_message(self):
-      username = self.cleaned_data.get("username")
-      dbuser = not User.objects.filter(name=username)
+    def clean_message(self):
+        username = self.cleaned_data.get("username")
+        dbuser = not User.objects.filter(name=username)
 
-      if dbuser:
-         raise forms.ValidationError("User already exists in the database")
-      return username
+        if dbuser:
+            raise forms.ValidationError("User already exists in the database")
+        return username
 
-   def save(self, commit=True):
-      user = super(CreateForm, self).save(commit=False)
-      if commit:
-         user.save()
-      return user
+    def save(self, commit=True):
+        user = super(CreateForm, self).save(commit=False)
+        user.email = self.cleaned_data["email"]
+        if commit:
+            user.save()
+        return user
 
 class PasswordResetForm(forms.Form):
    email = forms.CharField(widget=forms.EmailInput()) 
