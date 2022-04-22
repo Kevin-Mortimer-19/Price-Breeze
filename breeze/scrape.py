@@ -28,7 +28,9 @@ def search(url):
         prodArr.append(line.getText(strip=True))
 
     for line in prices:
-        priceArr.append(line.getText(strip=True))
+        priceVal = line.getText(strip=True)
+        priceNum = float(priceVal.replace("$",""))
+        priceArr.append(priceNum)
 
     for line in store:
         storeArr.append(line.getText(strip=True))
@@ -50,3 +52,5 @@ def search(url):
     print("file shouldve been created PT2")
     
     openJSON()
+
+    print("file shouldve been updated")

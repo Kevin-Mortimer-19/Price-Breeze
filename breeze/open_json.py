@@ -9,7 +9,7 @@ import os
 
 filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
 filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
-data = ""
+data = [  { "prod_name": "Great Value Milk, Vitamin D, Whole - 1 gal (3.78 l)", "price": 4.49, "store": "Walmart" }]
 
 def openJSON():
     # if(filepath.exists):
@@ -18,8 +18,8 @@ def openJSON():
 
     # returns JSON object as
     # a list of dictionaries
-    data = json.load(f)
-    
+    global data
+    data = json.load(f)    
 
     # Closing file
     f.close()
@@ -54,7 +54,7 @@ def lowTable():
 
 
 def printTable(df):
-    dfg = df.groupby(['title','category','price'], sort=False).sum()
+    dfg = df.groupby(['prod_name','store','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
 
     return table
