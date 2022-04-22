@@ -90,7 +90,7 @@ def lowTableStore():
 
 
 def printTable(df):
-    dfg = df.groupby(['title','category','price'], sort=False).sum()
+    dfg = df.groupby(['prod_name','store','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
 
     return table
