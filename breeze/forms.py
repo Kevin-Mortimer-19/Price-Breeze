@@ -49,20 +49,34 @@ class LoginForm(forms.Form):
 
 
 class CreateForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+    first_name = forms.CharField(required=True, label="First Name:")
+    last_name = forms.CharField(required=True, label="Last Name:")
+    
+    class Meta:
+        model = User
+        fields = ('email', 'username', 'first_name',
+                  'last_name', 'password1', 'password2')
 
-   def clean_message(self):
-      username = self.cleaned_data.get("username")
-      dbuser = not User.objects.filter(name=username)
+    def clean_message(self):
+        username = self.cleaned_data.get("username")
+        dbuser = not User.objects.filter(name=username)
 
-      if dbuser:
-         raise forms.ValidationError("User already exists in the database")
-      return username
+        if dbuser:
+            raise forms.ValidationError("User already exists in the database")
+        return username
 
-   def save(self, commit=True):
-      user = super(CreateForm, self).save(commit=False)
-      if commit:
-         user.save()
-      return user
+    def save(self, commit=True):
+        user = super(CreateForm, self).save(commit=False)
+        user.email = self.cleaned_data["email"]
+        
+        user.full_name = '{}.{}'.format(
+            self.cleaned_data['last_name'],
+            self.cleaned_data['first_name']
+        )
+        if commit:
+            user.save()
+        return user
 
 class PasswordResetForm(forms.Form):
    email = forms.CharField(widget=forms.EmailInput()) 
@@ -166,3 +180,6 @@ class PasswordChangeForm(forms.Form):
 
 class addToList(forms.Form):
     item = forms.CharField(max_length=100)
+    
+class UserProfileForm(forms.Form):
+    user = forms.CharField(max_length=100)

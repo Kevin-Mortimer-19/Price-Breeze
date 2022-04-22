@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from breeze.forms import LoginForm, CreateForm, addToList
+from breeze.forms import LoginForm, CreateForm, addToList, UserProfileForm
 from breeze.models import ShoppingList, Item
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -98,7 +98,7 @@ def password_reset_request(request):
     
 	password_reset_form = PasswordResetForm()
 
-	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
+	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
 
 def list(request):
 		#form = addToList(request.POST)
@@ -119,6 +119,9 @@ def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
 
+def user_profile_view(request):
+     user_profile_form = UserProfileForm(request.POST)
+     return render(request, "user_profile.html",{'user_profile_form':user_profile_form})
 
 #table output views for sorting urls
 
