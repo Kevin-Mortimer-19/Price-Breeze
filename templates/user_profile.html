@@ -9,21 +9,17 @@
         <br/>
         <h1>price breeze</h1>
         <br/>
-        <br/>
-        <div id = "usernameShow">
-            {% if user.is_authenticated %}
-            <h3> Welcome {{ user.get_username }} !</h3>
-            {% endif %}
-        </div>
-
+        
         <nav class = "navBar">
             <ul>
-                <li><a href="{% url 'login'%}">Sign-in</a> | </li>
+                <li>|   <a href="{% url 'login'%}">Sign-in</a> | </li>
                 <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
                 <li><a href="{% url 'home'%}">Home</a> | </li>
-                <li><a href="{% url 'list'%}">Shopping List</a></li>
+                <li><a href="{% url 'list'%}">Shopping List</a> |  </li>
+                <li><a href="{% url 'user_profile_view'%}">Profile</a>  |   </li>
             </ul>
         </nav>
+        <br/>
 
     </header>
 
