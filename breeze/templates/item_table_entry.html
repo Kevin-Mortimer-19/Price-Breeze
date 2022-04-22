@@ -1,13 +1,25 @@
 {% for item in results %}
     <tr>
-        <td>{{ item.title }}</td>
-        <td>{{ item.price }}</td>
-        <td>{{ item.description }}</td>
-        <td>{{ item.location }}</td>
-        <td> 
-            <form>
-                <input type="button" value="Add to Shopping List">
-            </form>
+        <form method="POST">
+        {% csrf_token %}
+        <td>
+            <label for='title'>{{ item.title }}</label>
+            <input name='title' type="text" style = "visibility: hidden; display: none" value = "{{ item.title }}">
         </td>
+        <td>
+            <label for='price'>{{ item.price }}</label>
+            <input name='price' type="text" style = "visibility: hidden; display: none" value = {{ item.price }}>
+        </td>
+        {% comment %} <td>
+            <label for='description'>{{ item.description }}</label>
+            <input name='description' type="text" style = "visibility: hidden; display: none" value = {{ item.description }}>
+        </td> {% endcomment %}
+        <td><label for='location'>{{ item.location }}</label>
+            <input name='location' type="text"  style = "visibility: hidden; display: none" value = {{ item.location }}>
+        </td>
+        <td> 
+            <input type="submit" name="add_to_list" value="Add to Shopping List">
+        </td>
+        </form>
     </tr>
 {% endfor %}

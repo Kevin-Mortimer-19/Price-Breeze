@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from breeze.forms import LoginForm, CreateForm, addToList, UserProfileForm
+from breeze.forms import *
 from breeze.models import ShoppingList, Item
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -24,6 +24,7 @@ from django.contrib import messages
 
 from django.shortcuts import HttpResponse
 from breeze.open_json import *
+from breeze.shops import *
 
 
 def create_account(request):
@@ -31,6 +32,8 @@ def create_account(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             user = form.save()
+            list = ShoppingList(userid=user)
+            list.save()
             login(request, user)
             messages.success(request, "Account created.")
             return redirect("home")
@@ -44,17 +47,41 @@ def log_in(request):
    return render(request, 'login.html')
 
 def home(request):
+	#if request.method == "POST":
+		#form = addToList(request.POST)
+		#if form.is_valid():
+			#list = ShoppingList.objects.get(userid=request.user)
+			#name = request.POST.get('item')
+			#item = Item(userid=list, item_name=name, item_id = 1)
+			#item.save()
+	#else:
+		#form = addToList()
+		#output = startTable()
+	#return render(request, "home_page.html", {"form":form, 'results':output})
+	form = searchFor()
 	if request.method == "POST":
-		form = addToList(request.POST)
-		if form.is_valid():
+    		# searchRes(request)
+		if 'add_to_list' in request.POST:
 			list = ShoppingList.objects.get(userid=request.user)
-			name = request.POST.get('item')
-			item = Item(userid=list, item_name=name, item_id = 1)
-			item.save()
-	else:
-		form = addToList()
-		output = startTable()
-	return render(request, "home_page.html", {"form":form, 'results':output})
+			name = request.POST.get('title')
+			this_price = request.POST.get('price')
+			this_location = request.POST.get('location')
+			new_item = Item(userid=list, item_name=name, item_id = 1, location=this_location, price=this_price)
+			new_item.save()
+		
+		if 'searchInput' in request.POST:
+			form = searchFor(request.POST)
+			if form.is_valid():
+				print('inside home func')
+				productItem = request.POST.get('product')
+				print('grabbed input: %s', productItem)
+				scrape_product(productItem)
+				print('scrapped product')
+		else:
+			form = searchFor()
+	output = startTable()
+	return render(request, "home_page.html", {'results': output, 'form': form})
+
 
 # Allows the password reset form to take input from user in the 
 # form of an email and sends an email to the user containing the link to reset password
@@ -90,7 +117,17 @@ def password_reset_request(request):
 	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
 
 def list(request):
+		#form = addToList(request.POST)
+		#if form.is_valid():
+		#list = ShoppingList.objects.get(userid=request.user)
+		#name = request.POST.get('item')
+		#item = Item(userid=list, item_name=name, item_id = 1)
+		#item.save()	
 	list = ShoppingList.objects.get(userid=request.user)
+	if request.method == "POST":
+		name = request.POST.get('title')
+		new_item = Item(userid=list, item_name=name, item_id = 1)
+		new_item.save()
 	items = Item.objects.filter(userid=list)
 	return render(request, "shopping_list.html", {"item_list":items})
 
@@ -118,7 +155,7 @@ def tableSortHPrice(request):
 	return render(request, 'home_page.html', {'results':output})
 
 def tableSortLPrice(request):
-#least to most
+    #least to most
 	output = lowTablePrice()
 	return render(request, 'home_page.html', {'results':output})
 
@@ -145,3 +182,7 @@ def tableSortLStore(request):
 #A to Z
 	output = lowTableStore()
 	return render(request, 'home_page.html', {'results':output})
+
+# def searchRes(request):
+
+# 	return render(request, "home_page.html", {'form':form})
