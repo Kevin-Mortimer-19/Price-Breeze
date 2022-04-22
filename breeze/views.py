@@ -31,6 +31,8 @@ def create_account(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             user = form.save()
+            list = ShoppingList(userid=user)
+            list.save()
             login(request, user)
             messages.success(request, "Account created.")
             return redirect("home")
@@ -44,17 +46,27 @@ def log_in(request):
    return render(request, 'login.html')
 
 def home(request):
+	#if request.method == "POST":
+		#form = addToList(request.POST)
+		#if form.is_valid():
+			#list = ShoppingList.objects.get(userid=request.user)
+			#name = request.POST.get('item')
+			#item = Item(userid=list, item_name=name, item_id = 1)
+			#item.save()
+	#else:
+		#form = addToList()
+		#output = startTable()
+	#return render(request, "home_page.html", {"form":form, 'results':output})
 	if request.method == "POST":
-		form = addToList(request.POST)
-		if form.is_valid():
+		if 'add_to_list' in request.POST:
 			list = ShoppingList.objects.get(userid=request.user)
-			name = request.POST.get('item')
-			item = Item(userid=list, item_name=name, item_id = 1)
-			item.save()
-	else:
-		form = addToList()
-		output = startTable()
-	return render(request, "home_page.html", {"form":form, 'results':output})
+			name = request.POST.get('title')
+			this_price = request.POST.get('price')
+			this_location = request.POST.get('location')
+			new_item = Item(userid=list, item_name=name, item_id = 1, location=this_location, price=this_price)
+			new_item.save()
+	output = startTable()
+	return render(request, "home_page.html", {'results':output})
 
 
 def password_reset_request(request):
@@ -89,7 +101,17 @@ def password_reset_request(request):
 	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
 
 def list(request):
+		#form = addToList(request.POST)
+		#if form.is_valid():
+		#list = ShoppingList.objects.get(userid=request.user)
+		#name = request.POST.get('item')
+		#item = Item(userid=list, item_name=name, item_id = 1)
+		#item.save()	
 	list = ShoppingList.objects.get(userid=request.user)
+	if request.method == "POST":
+		name = request.POST.get('title')
+		new_item = Item(userid=list, item_name=name, item_id = 1)
+		new_item.save()
 	items = Item.objects.filter(userid=list)
 	return render(request, "shopping_list.html", {"item_list":items})
 

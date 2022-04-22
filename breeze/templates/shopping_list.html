@@ -18,7 +18,11 @@
     <p> Welcome to your shopping list, {{ user.get_username }}. </p>
     {% endif %}
     {% for item in item_list %}
-        <li>{{ item.item_name }}</li>
+        <li>
+            <span>Name: {{ item.item_name }}</span>
+            <p>Price: {{ item.price }}</p>
+            <p>Location: {{ item.location }}</p>
+        </li>
     {% endfor %}
 {% endblock %}
 

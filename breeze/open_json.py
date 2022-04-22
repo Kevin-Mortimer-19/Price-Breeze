@@ -3,8 +3,10 @@ import pandas
 import numpy
 import json
 from breeze.sort import *
+
 #from IPython.display import HTML
-from breeze.item import Item
+from breeze.item import SingleItem
+
 import os
 
 
@@ -80,7 +82,7 @@ def printTable(df):
     for index in df.index:
         #entry = Item(row['title'], row['price'], row['description'], row['location'])
         #entry = Item(df['title'][index], df['price'][index], df['description'][index], df['location'][index])
-        entry = Item(df['prod_name'][index], df['price'][index], df['description'][index], df['store'][index])
+        entry = SingleItem(df['prod_name'][index], df['price'][index], df['description'][index], df['store'][index])
         results.append(entry)
     return results
     #for ind in df.index:

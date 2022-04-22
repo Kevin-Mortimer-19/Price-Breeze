@@ -1,4 +1,4 @@
-class Item:
+class SingleItem:
     def __init__(self, title, price, description, location):
         self.title = title
         self.price = price
