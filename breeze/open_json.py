@@ -12,12 +12,20 @@ import os
 
 filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
 filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
-# Opening JSON file
-f = open(filepath,)
+data = [  { "prod_name": "  ", "price": "" , "store": "" }]
 
-# returns JSON object as
-# a list of dictionaries
-data = json.load(f)
+def openJSON():
+    # if(filepath.exists):
+        # Opening JSON file
+    f = open(filepath,)
+
+    # returns JSON object as
+    # a list of dictionaries
+    global data
+    data = json.load(f)    
+
+    # Closing file
+    f.close()
 
 def updateTable():
     f = open(filepath,)
@@ -54,7 +62,7 @@ def lowTableName():
     return printTable(df)
 
 def highTableStore():
-#prints sorted data by store name from Z-A
+    #prints sorted data by store name from Z-A
     data_sorted_greatest = sort_great_least_store(data)
     df = pandas.DataFrame(data_sorted_greatest)
     return printTable(df)
@@ -80,13 +88,13 @@ def printTable(df):
 
     results = []
     for index in df.index:
-        #entry = Item(row['title'], row['price'], row['description'], row['location'])
-        #entry = Item(df['title'][index], df['price'][index], df['description'][index], df['location'][index])
-        entry = SingleItem(df['prod_name'][index], df['price'][index], df['description'][index], df['store'][index])
+        #entry = Item(row['title'], row['price'], row['location'])
+        #entry = Item(df['title'][index], df['price'][index], df['description'ndex], df['location'][index])
+        entry = SingleItem(df['prod_name'][index], df['price'][index], df['store'][index])
         results.append(entry)
     return results
     #for ind in df.index:
      #print(df['Name'][ind], df['Stream'][ind])
 
 # Closing file
-f.close()
+# f.close()

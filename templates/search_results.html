@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %} 
+  
+  <!--search results page output-->
+
+    <div class="row my-3 p-3">
+        <header>
+            <br/>
+            <h1>price breeze</h1>
+            <br/>
+            
+            <nav class = "navBar">
+                <ul>
+                    <li>|   <a href="{% url 'login'%}">Sign-in</a> | </li>
+                    <li><a href="{% url 'create_account'%}">Create Account</a> | </li>
+                    <li><a href="{% url 'home'%}">Home</a> | </li>
+                    <li><a href="{% url 'list'%}">Shopping List</a> |  </li>
+                </ul>
+            </nav>
+            <br/>
+
+        </header>
+
+        <section class = "backgroundArea">
+                <ul class = "circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+        </section>
+
+    </div>
+
+
+
+    <div id = "table">
+        <!--{% include "result.html" %}-->
+        <table border="1" class="dataframe">
+        {% include "item_table_headers.html" %}
+        {% include "item_table_entry.html" %} 
+    </table>
+    </div>
+
+{% endblock %}

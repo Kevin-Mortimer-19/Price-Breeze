@@ -54,32 +54,35 @@
     <section>
         <br/>
         <div id = "searchBar">
-            <input type="text" name="searchInput" placeholder="Search for products..">
-            <button type="submit" name="search-button">Search</button>
+            <form method = "POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit" name = "searchInput">
+                {% comment %} <button onclick="location.href='{%url 'search_results_req'%}'"type="submit" value="Submit">Submit</button> {% endcomment %}
+            </form>
         </div>
     </section>
     
-    <div id = "table">
-         <!--{% include "result.html" %}-->
-         <table border="1" class="dataframe">
-         {% include "item_table_headers.html" %}
-         {% include "item_table_entry.html" %} 
-        </table>
+    {% if results is None %}
+    {% else %}
+        <div id = "table" >
+            <!--{% include "result.html" %}-->
+            <table border="1" class="dataframe">
+            {% include "item_table_headers.html" %}
+            {% include "item_table_entry.html" %} 
+            </table>
 
-        <button onclick="location.href='{%url 'highPrice'%}'"type="button">Sort Highest to Lowest by Price</button>
-        <button onclick="location.href='{%url 'lowPrice'%}'"type="button">Sort Lowest to Highest by Price</button>
-        <button onclick="location.href='{%url 'lowName'%}'"type="button">Sort A-Z by Product Name</button>
-        <button onclick="location.href='{%url 'highName'%}'"type="button">Sort Z-A by Product Name</button>
-        <button onclick="location.href='{%url 'lowStore'%}'"type="button">Sort A-Z by Store Name</button>
-        <button onclick="location.href='{%url 'highStore'%}'"type="button">Sort Z-A by Store Name</button>
-        <button onclick="location.href='{%url 'reset'%}'"type="button">Reset Results (Display by Relevance)</button>
-    </div>
-    <!--<form method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-</form>-->
-    
+            <button onclick="location.href='{%url 'highPrice'%}'"type="button">Sort Highest to Lowest by Price</button>
+            <button onclick="location.href='{%url 'lowPrice'%}'"type="button">Sort Lowest to Highest by Price</button>
+            <button onclick="location.href='{%url 'lowName'%}'"type="button">Sort A-Z by Product Name</button>
+            <button onclick="location.href='{%url 'highName'%}'"type="button">Sort Z-A by Product Name</button>
+            <button onclick="location.href='{%url 'lowStore'%}'"type="button">Sort A-Z by Store Name</button>
+            <button onclick="location.href='{%url 'highStore'%}'"type="button">Sort Z-A by Store Name</button>
+            <button onclick="location.href='{%url 'reset'%}'"type="button">Reset Results (Display by Relevance)</button>
+        </div>
+
+    {% endif %}
+
 </body>
 
 </html>
