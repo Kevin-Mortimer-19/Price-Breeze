@@ -56,7 +56,8 @@
             <form method = "POST">
                 {% csrf_token %}
                 {{ form }}
-                <input type="submit" value="Submit">
+                {% comment %} <input type="submit" value="Submit"> {% endcomment %}
+                <button onclick="location.href='{%url 'search_results_req'%}'"type="submit" value="Submit">Submit</button>
             </form>
         </div>
     </section>
