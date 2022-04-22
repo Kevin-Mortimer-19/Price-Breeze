@@ -1,6 +1,5 @@
 from unicodedata import category
 import pandas
-import numpy
 import json
 from breeze.sort import *
 from breeze.item import SingleItem
@@ -10,6 +9,7 @@ filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.j
 filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
 data = [  { "prod_name": "  ", "price": "" , "store": "" }]
 
+#function to open webscraped JSON file results
 def openJSON():
     # Opening JSON file
     f = open(filepath,)
@@ -22,10 +22,10 @@ def openJSON():
     # Closing file
     f.close()
 
+#updates display table with appropriate JSON file
 def updateTable():
     f = open(filepath,)
     data = json.load(f)
-
 
 def startTable():
 #prints table at beginning when starting search page
