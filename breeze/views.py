@@ -53,15 +53,8 @@ def log_in(request):
 def home(request):
 	form = searchFor()
 	if request.method == "POST":
-    		# searchRes(request)
 		if 'add_to_list' in request.POST:
-			list = ShoppingList.objects.get(userid=request.user)
-			name = request.POST.get('title')
-			this_price = request.POST.get('price')
-			this_location = request.POST.get('location')
-			new_item = Item(userid=list, item_name=name, item_id = 1, location=this_location, price=this_price)
-			new_item.save()
-		
+			saveItem(request)
 		if 'searchInput' in request.POST:
 			form = searchFor(request.POST)
 			if form.is_valid():
@@ -137,34 +130,64 @@ def table(request):
 #price tables
 def tableSortHPrice(request):
 #most to least
+	if request.method == "POST":
+		if 'add_to_list' in request.POST:
+			saveItem(request)
 	output = highTablePrice()
-	return render(request, 'home_page.html', {'results':output})
+	form = searchFor()
+	return render(request, 'home_page.html', {'results':output, 'form':form})
 
 def tableSortLPrice(request):
     #least to most
+	if request.method == "POST":
+		if 'add_to_list' in request.POST:
+			saveItem(request)
 	output = lowTablePrice()
-	return render(request, 'home_page.html', {'results':output})
-
+	form = searchFor()
+	return render(request, 'home_page.html', {'results':output, 'form':form})
 
 #product name tables
 def tableSortHName(request):
 #Z to A
+	if request.method == "POST":
+		if 'add_to_list' in request.POST:
+			saveItem(request)
 	output = highTableName()
-	return render(request, 'home_page.html', {'results':output})
+	form = searchFor()
+	return render(request, 'home_page.html', {'results':output, 'form':form})
 
 def tableSortLName(request):
 #A to Z
+	if request.method == "POST":
+		if 'add_to_list' in request.POST:
+			saveItem(request)
 	output = lowTableName()
-	return render(request, 'home_page.html', {'results':output})
-
+	form = searchFor()
+	return render(request, 'home_page.html', {'results':output, 'form':form})
 
 #store name tables
 def tableSortHStore(request):
 #Z to A
+	if request.method == "POST":
+		if 'add_to_list' in request.POST:
+			saveItem(request)
 	output = highTableStore()
-	return render(request, 'home_page.html', {'results':output})
+	form = searchFor()
+	return render(request, 'home_page.html', {'results':output, 'form':form})
 
 def tableSortLStore(request):
 #A to Z
+	if request.method == "POST":
+		if 'add_to_list' in request.POST:
+			saveItem(request)
 	output = lowTableStore()
-	return render(request, 'home_page.html', {'results':output})
+	form = searchFor()
+	return render(request, 'home_page.html', {'results':output, 'form':form})
+
+def saveItem(request):
+	list = ShoppingList.objects.get(userid=request.user)
+	name = request.POST.get('title')
+	this_price = request.POST.get('price')
+	this_location = request.POST.get('location')
+	new_item = Item(userid=list, item_name=name, item_id = 1, location=this_location, price=this_price)
+	new_item.save()
