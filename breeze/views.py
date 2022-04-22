@@ -37,8 +37,9 @@ def create_account(request):
         else:
             messages.error(request, "Account creation failed again.")
     else:
-        form = CreateForm()
-    return render(request, 'account_creation.html', {'form':form})
+        form = CreateForm()	
+        search_results = startTableAlt()
+    return render(request, "home_page.html", {"form":form, "results": search_results})
 
 def log_in(request):
    return render(request, 'login.html')

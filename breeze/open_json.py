@@ -4,6 +4,7 @@ import numpy
 import json
 from breeze.sort import *
 from IPython.display import HTML
+from breeze.item import Item
 import os
 
 
@@ -68,6 +69,22 @@ def printTable(df):
     table = dfg.to_html(filepath2,)
 
     return table
+
+def startTableAlt():
+    df = pandas.DataFrame(data)
+    return printTableAlt(df)
+
+def printTableAlt(df):
+
+    results = []
+    for index in df.index:
+        #entry = Item(row['title'], row['price'], row['description'], row['location'])
+        #entry = Item(df['title'][index], df['price'][index], df['description'][index], df['location'][index])
+        entry = Item(df['title'][index], df['price'][index], df['description'][index], "sample location")
+        results.append(entry)
+    return results
+    #for ind in df.index:
+     #print(df['Name'][ind], df['Stream'][ind])
 
 # Closing file
 f.close()
