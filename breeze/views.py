@@ -82,6 +82,9 @@ def home(request):
 	output = startTable()
 	return render(request, "home_page.html", {'results': output, 'form': form})
 
+
+# Allows the password reset form to take input from user in the 
+# form of an email and sends an email to the user containing the link to reset password
 def password_reset_request(request):
 	if request.method == "POST":
 		password_reset_form = PasswordResetForm(request.POST)
@@ -128,10 +131,11 @@ def list(request):
 	items = Item.objects.filter(userid=list)
 	return render(request, "shopping_list.html", {"item_list":items})
 
+# View for changing password
 def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
-
+# View for  showing the user profile
 def user_profile_view(request):
      user_profile_form = UserProfileForm(request.POST)
      return render(request, "user_profile.html",{'user_profile_form':user_profile_form})

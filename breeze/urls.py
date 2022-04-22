@@ -10,6 +10,7 @@ urlpatterns = [
     path("", views.create_account, name="create_account"),
     path("home/", views.home, name="home"),
     path("log_in/", views.login, name="login"),
+    # page to password reset
     path("password_reset", views.password_reset_request, name="password_reset_request"),
     # path('search_results', views.home, name="search_results_req"),
     path("list/", views.list, name="list"),
