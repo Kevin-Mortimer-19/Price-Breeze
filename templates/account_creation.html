@@ -36,10 +36,11 @@
     <section class = "newAcc">
         <form method="POST">{% csrf_token %}
             <div id="login-info">
-                {% comment %} <p>
+                <p>
                 {{ form.username.label_tag }}
                 {{ form.username}}
                 </p>
+                <p>{{form.username.help_text}}</p>
 
                 <p> 
                 {{ form.email.label_tag }}
@@ -49,19 +50,18 @@
                 <p>
                 {{ form.password1.label_tag }}
                 {{ form.password1 }}
-                {{form.password1.help_text}}
                 </p>
+                <p>{{form.password1.help_text}}</p>
 
                 <p>
                 {{ form.password2.label_tag }}
                 {{ form.password2 }}
-                {{form.password2.help_text}}
                 </p>
 
+                <p>{{form.password2.help_text}}</p>
+
                 {{form.password1.errors}}
-                {{form.password2.errors}} {% endcomment %}
-                
-                {{form}}
+                {{form.password2.errors}}
 
                 <div id = "submission">
                     <br/>
