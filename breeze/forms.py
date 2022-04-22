@@ -135,11 +135,12 @@ class PasswordResetForm(forms.Form):
                 subject_template_name, email_template_name, context, from_email,
                 user_email, html_email_template_name=html_email_template_name,
             )
+
+    
+    
+#  A form that lets a user change their password by entering their old password.
 class PasswordChangeForm(forms.Form):
-    """
-    A form that lets a user change their password by entering their old
-    password.
-    """
+
     error_messages = {
         **SetPasswordForm.error_messages,
         'password_incorrect': _("Your old password was entered incorrectly. Please enter it again."),
@@ -167,5 +168,6 @@ class PasswordChangeForm(forms.Form):
 class addToList(forms.Form):
     item = forms.CharField(max_length=100)
     
+# form to be used for user input on the user profile page/ currently not in use
 class UserProfileForm(forms.Form):
     user = forms.CharField(max_length=100)
