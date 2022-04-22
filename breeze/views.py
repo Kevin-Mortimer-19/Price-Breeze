@@ -65,11 +65,8 @@ def home(request):
 		if 'searchInput' in request.POST:
 			form = searchFor(request.POST)
 			if form.is_valid():
-				print('inside home func')
 				productItem = request.POST.get('product')
-				print('grabbed input: %s', productItem)
 				scrape_product(productItem)
-				print('scrapped product')
 		else:
 			form = searchFor()
 	output = startTable()

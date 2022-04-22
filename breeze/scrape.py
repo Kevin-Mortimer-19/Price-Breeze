@@ -4,9 +4,9 @@ from breeze.open_json import *
 import json
 from breeze.open_json import *
 
+#function that performs the search
 def search(url):
 
-    print("inside search function")
     s = HTMLSession()
     source = s.get(url)
     # source.html.render(sleep=10) #used for testing purposes
