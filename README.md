@@ -24,15 +24,7 @@ List all the steps on how to run your project
 
 ## Demo video
 
-Upload your demo video to youtube and put a link here. Basically, the video content is very much like a quick live demo of your product with the followings:
-1. Introduction
-2. Quick walkthrough of all the features/functions one by one
-
-Please make it short (1-3 minutes) and interesting!
-
-Sample: https://www.youtube.com/watch?v=Pr-JMqTkdEM
-
-How to record your screen: https://www.techradar.com/how-to/record-your-screen
+https://youtu.be/F9NhHCBetWE
 
 ## Contributors
 
