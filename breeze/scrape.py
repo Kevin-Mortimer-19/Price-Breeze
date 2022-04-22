@@ -1,9 +1,12 @@
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
 import json
+import os
+from breeze.open_json import *
 
 def search(url):
 
+    print("inside search function")
     s = HTMLSession()
     source = s.get(url)
     # source.html.render(sleep=10)
@@ -37,11 +40,13 @@ def search(url):
     data = [{"prod_name": i, "price": p, "store": s, "link": l}
             for i, p, s, l in zip(prodArr, priceArr, storeArr, linksArr)]
     # print(data)
-    # print(json.dumps(data))
+    print(json.dumps(data))
 
     #dump data out to JSON file
-    filename = "products.json"
-
-    with open(filename, 'w') as outfile:
+    with open("breeze\products.json", 'w') as outfile:
+        print("creating json file")
         json.dump(data, outfile, indent=2)
 
+    print("file shouldve been created PT2")
+    
+    openJSON()

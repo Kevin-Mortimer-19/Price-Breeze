@@ -9,12 +9,20 @@ import os
 
 filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
 filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
-# Opening JSON file
-f = open(filepath,)
+data = ""
 
-# returns JSON object as
-# a list of dictionaries
-data = json.load(f)
+def openJSON():
+    # if(filepath.exists):
+        # Opening JSON file
+    f = open(filepath,)
+
+    # returns JSON object as
+    # a list of dictionaries
+    data = json.load(f)
+    
+
+    # Closing file
+    f.close()
 
 def startTable():
     df = pandas.DataFrame(data)
@@ -50,7 +58,3 @@ def printTable(df):
     table = dfg.to_html(filepath2,)
 
     return table
-
-
-# Closing file
-f.close()
