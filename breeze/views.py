@@ -31,8 +31,6 @@ def create_account(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             user = form.save()
-            list = ShoppingList(userid=user)
-            list.save()
             login(request, user)
             messages.success(request, "Account created.")
             return redirect("home")
@@ -55,7 +53,8 @@ def home(request):
 			item.save()
 	else:
 		form = addToList()
-	return render(request, "home_page.html", {"form":form})
+		output = startTable()
+	return render(request, "home_page.html", {"form":form, 'results':output})
 
 
 def password_reset_request(request):
@@ -87,7 +86,7 @@ def password_reset_request(request):
     
 	password_reset_form = PasswordResetForm()
 
-	return render(request=request, template_name="password/password_reset.html", context={"password_reset_form":password_reset_form})
+	return render(request=request, template_name="password/password_reset.html", context={"password/password_reset_form":password_reset_form})
 
 def list(request):
 	list = ShoppingList.objects.get(userid=request.user)
@@ -97,15 +96,47 @@ def list(request):
 def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
-    
+
+
+#table output views for sorting urls
+
+
 def table(request):
+#initial table
 	output = startTable()
-	return render(request, 'home_page.html', {'data':output})
+	return render(request, 'home_page.html', {'results':output})
 
-def tableSortH(request):
-	output = highTable()
-	return render(request, 'home_page.html', {'data':output})
+#price tables
+def tableSortHPrice(request):
+#most to least
+	output = highTablePrice()
+	return render(request, 'home_page.html', {'results':output})
 
-def tableSortL(request):
-	output = lowTable()
-	return render(request, 'home_page.html', {'data':output})
+def tableSortLPrice(request):
+#least to most
+	output = lowTablePrice()
+	return render(request, 'home_page.html', {'results':output})
+
+
+#product name tables
+def tableSortHName(request):
+#Z to A
+	output = highTableName()
+	return render(request, 'home_page.html', {'results':output})
+
+def tableSortLName(request):
+#A to Z
+	output = lowTableName()
+	return render(request, 'home_page.html', {'results':output})
+
+
+#store name tables
+def tableSortHStore(request):
+#Z to A
+	output = highTableStore()
+	return render(request, 'home_page.html', {'results':output})
+
+def tableSortLStore(request):
+#A to Z
+	output = lowTableStore()
+	return render(request, 'home_page.html', {'results':output})
