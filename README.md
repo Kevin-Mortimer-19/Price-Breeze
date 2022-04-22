@@ -1,19 +1,20 @@
 # Price Breeze
 
-This is a sample README file. It is required to have all sections below at the minimum but feel free to add more if you want. Also, it is recommended to follow the same formats with headers, bullet points, highlights...
-
-Here is a README.md example: https://github.com/drphamwit/swe-sample-project-github-repo/blob/master/README-Example.md
-
 ## Introduction
 
-Briefly describe what your project is all about.
+Price Breeze is a web application designed to make trips to the grocery store more convenient. After making an account, users can search for products on the web, sort those products according to price, location, or product name, and add items to their shopping list.
 
 ## Features
-List all the features of your application.
-1. Feature #1
-2. Feature #2
-3. Feature #3
-4. ...
+1. Account Management
+  * Create account
+  * Reset password
+2. Search within platform
+  * Web search
+3. Sort products
+  * Sort by factors such as price and product name
+4. Construct a Shopping List
+  * Add item to shopping list
+
 
 ## Getting Started
 ### Installation and Setup
@@ -35,6 +36,7 @@ How to record your screen: https://www.techradar.com/how-to/record-your-screen
 
 ## Contributors
 
-* student name (email), role
-* student name (email), role
-* ...
+* Elise Ducharme (ducharmee@wit.edu), account managemet
+* Sarah Mahmoud (mahmouds@wit.edu), search and web scraping
+* Kevin Mortimer (mortimerk1@wit.edu), database and shopping list
+* Calvin Vuong (vuongc@wit.edu), results page and sorting options
