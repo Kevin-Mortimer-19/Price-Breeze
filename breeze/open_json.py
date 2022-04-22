@@ -12,7 +12,7 @@ import os
 
 filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'products.json')
 filepath2 = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates/result.html')
-data = [  { "prod_name": "Great Value Milk, Vitamin D, Whole - 1 gal (3.78 l)", "price": 4.49, "store": "Walmart" }]
+data = [  { "prod_name": "  ", "price": "" , "store": "" }]
 
 def openJSON():
     # if(filepath.exists):
