@@ -18,9 +18,42 @@ Price Breeze is a web application designed to make trips to the grocery store mo
 
 ## Getting Started
 ### Installation and Setup
-List all the steps on how to install and setup your project
+1. Install Python (https://www.python.org/downloads/)
+2. Libraries required:
+   - django
+
+   ```console
+   pip install django
+   ```
+
+   - django crispy forms
+
+   ```console
+   pip install django-crispy-forms
+   ```
+
+   - requests_html
+
+   ```console
+   pip install requests_html
+   ```
+
+   * pandas
+
+   ```console
+   pip install pandas
+   ```
+
+   * bs4
+
+   ```console
+   pip install bs4
+   ```
+
 ### Run
-List all the steps on how to run your project
+
+
+
 
 ## Demo video
 
