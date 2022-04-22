@@ -16,41 +16,58 @@ f = open(filepath,)
 # a list of dictionaries
 data = json.load(f)
 
+def updateTable():
+    f = open(filepath,)
+    data = json.load(f)
+
+
 def startTable():
+#prints table at beginning when starting search page
     df = pandas.DataFrame(data)
     return printTable(df)
-    #dfg = df.groupby(['title','category','price'], sort=False).sum()
-    #table = dfg.to_html(filepath2,)
 
-    #return table
-
-def highTable():
-#sorted data by price highest to lowest 
+def highTablePrice():
+#prints sorted data by price highest to lowest 
     data_sorted_greatest = sort_great_least_price(data)
     df = pandas.DataFrame(data_sorted_greatest)
     return printTable(df)
-    #dfg = df.groupby(['title','category','price'], sort=False).sum()
-    #table = dfg.to_html(filepath2,)
 
-    #return table
-
-def lowTable():
-#sorted data by price lowest to highest 
+def lowTablePrice():
+#prints sorted data by price lowest to highest 
     data_sorted_lowest = sort_least_great_price(data)
     df = pandas.DataFrame(data_sorted_lowest)
     return printTable(df)
-    #dfg = df.groupby(['title','category','price'], sort=False).sum()
-    #table = dfg.to_html(filepath2,)
 
-    #return table
+def highTableName():
+#prints sorted data by product name form Z-A 
+    data_sorted_greatest = sort_great_least_product_name(data)
+    df = pandas.DataFrame(data_sorted_greatest)
+    return printTable(df)
 
+def lowTableName():
+#prints sorted data by product name from A-Z
+    data_sorted_lowest = sort_least_great_product_name(data)
+    df = pandas.DataFrame(data_sorted_lowest)
+    return printTable(df)
+
+def highTableStore():
+#prints sorted data by store name from Z-A
+    data_sorted_greatest = sort_great_least_store(data)
+    df = pandas.DataFrame(data_sorted_greatest)
+    return printTable(df)
+
+def lowTableStore():
+#prints sorted data by store name from A-Z
+    data_sorted_lowest = sort_least_great_store(data)
+    df = pandas.DataFrame(data_sorted_lowest)
+    return printTable(df)
 
 def printTable(df):
-    dfg = df.groupby(['title','category','price'], sort=False).sum()
+#prints any dataframe to html table
+    dfg = df.groupby(['prod_name','store','price'], sort=False).sum()
     table = dfg.to_html(filepath2,)
 
     return table
-
 
 # Closing file
 f.close()

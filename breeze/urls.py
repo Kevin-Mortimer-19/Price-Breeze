@@ -12,7 +12,13 @@ urlpatterns = [
     path("log_in/", views.login, name="login"),
     path("password_reset", views.password_reset_request, name="password_reset_request"),
     path("list/", views.list, name="list"),
-    path("high/", views.tableSortH, name="high"),
-    path("low/", views.tableSortL, name="low"),
+
+    #sorting urls
+    path("high_price/", views.tableSortHPrice, name="highPrice"),
+    path("low_price/", views.tableSortLPrice, name="lowPrice"),
+    path("high_name/", views.tableSortHName, name="highName"),
+    path("low_name/", views.tableSortLName, name="lowName"),
+    path("high_store/", views.tableSortHStore, name="highStore"),
+    path("low_store/", views.tableSortLStore, name="lowStore"),
     path("reset/", views.table, name="reset")
 ]
