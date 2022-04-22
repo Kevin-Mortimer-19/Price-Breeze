@@ -95,31 +95,47 @@ def list(request):
 def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
-    
+
+
+#table output views for sorting urls
+
+
 def table(request):
+#initial table
 	output = startTable()
 	return render(request, 'home_page.html', {'data':output})
 
+#price tables
 def tableSortHPrice(request):
+#most to least
 	output = highTablePrice()
 	return render(request, 'home_page.html', {'data':output})
 
 def tableSortLPrice(request):
+#least to most
 	output = lowTablePrice()
 	return render(request, 'home_page.html', {'data':output})
 
+
+#product name tables
 def tableSortHName(request):
+#Z to A
 	output = highTableName()
 	return render(request, 'home_page.html', {'data':output})
 
 def tableSortLName(request):
+#A to Z
 	output = lowTableName()
 	return render(request, 'home_page.html', {'data':output})
 
+
+#store name tables
 def tableSortHStore(request):
+#Z to A
 	output = highTableStore()
 	return render(request, 'home_page.html', {'data':output})
 
 def tableSortLStore(request):
+#A to Z
 	output = lowTableStore()
 	return render(request, 'home_page.html', {'data':output})

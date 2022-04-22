@@ -12,6 +12,8 @@ urlpatterns = [
     path("log_in/", views.login, name="login"),
     path("password_reset", views.password_reset_request, name="password_reset_request"),
     path("list/", views.list, name="list"),
+
+    #sorting urls
     path("high_price/", views.tableSortHPrice, name="highPrice"),
     path("low_price/", views.tableSortLPrice, name="lowPrice"),
     path("high_name/", views.tableSortHName, name="highName"),
