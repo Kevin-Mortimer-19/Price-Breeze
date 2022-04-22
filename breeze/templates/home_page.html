@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Price Breeze - Home</title>
-    <link rel="shortcut icon" href="../../images/price-breeze-logo.ico">
     <link rel="stylesheet" href="../../static/homeDesign.css" />
     <link rel = "stylesheet" href = "../../static/background.css?{% now "U" %}">
     <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
-
 </head>
 
 <body>
+    <!-- header with title and navBar details -->
     <header>
         <br/>
         <h1>price breeze</h1>
@@ -36,6 +35,7 @@
 
     </header>
 
+    <!--background details for floating circles-->
     <section class = "backgroundArea">
             <ul class = "circles">
                 <li></li>
@@ -51,6 +51,7 @@
             </ul>
     </section>
 
+    <!--search bar input and submission-->
     <section>
         <br/>
         <div id = "searchBar">
@@ -58,13 +59,14 @@
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit" name = "searchInput">
-                {% comment %} <button onclick="location.href='{%url 'search_results_req'%}'"type="submit" value="Submit">Submit</button> {% endcomment %}
             </form>
         </div>
     </section>
     
+    <!--search results table output-->
     {% if results is None %}
     {% else %}
+
         <div id = "table" >
 
             <button onclick="location.href='{%url 'highPrice'%}'"type="button">Sort Highest to Lowest by Price</button>
@@ -84,5 +86,4 @@
     {% endif %}
 
 </body>
-
 </html>

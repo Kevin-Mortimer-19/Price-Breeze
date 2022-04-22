@@ -35,7 +35,6 @@ def _unicode_ci_compare(s1, s2):
     return unicodedata.normalize('NFKC', s1).casefold() == unicodedata.normalize('NFKC', s2).casefold()
 
 # Form for logging in with an existing account
-
 class LoginForm(forms.Form):
    user = forms.CharField(max_length=100)
    password = forms.CharField(widget=forms.PasswordInput())
@@ -50,7 +49,6 @@ class LoginForm(forms.Form):
       return username
 
 # Form for creating a new account
-
 class CreateForm(UserCreationForm):
     email = forms.EmailField(required=True)
     first_name = forms.CharField(required=True, label="First Name:")
@@ -153,9 +151,7 @@ class PasswordResetForm(forms.Form):
                 user_email, html_email_template_name=html_email_template_name,
             )
 
-
 #  A form that lets a user change their password by entering their old password.
-
 class PasswordChangeForm(forms.Form):
 
     error_messages = {
@@ -181,7 +177,8 @@ class PasswordChangeForm(forms.Form):
                 code='password_incorrect',
             )
         return old_password
-    
+
+#form to be used for user input on the homepage for the search function
 class searchFor(forms.Form):
     product = forms.CharField(max_length=100)
     

@@ -1,3 +1,5 @@
+/*homepage design*/
+
 /* welcome _____ !*/
 #usernameShow {
     color: #8e9aaf;
@@ -35,7 +37,6 @@ a {
     width: 80%;
     border-radius: 20px;
     border-width: 5px;
-   /* border-style: ridge;*/
     border-color: lavender;
 }
 
@@ -59,29 +60,3 @@ a {
 #searchBar button:hover {
     background: #ebbcc3;
 }
-
-/*body {
-    margin: auto;
-    padding: 10px;
-    background-color: aliceblue;
-}
-
-h1 {
-    text-align: center;
-    font-size: 100px;
-    color: lightcoral;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-
-legend {
-    font-size: 20px;
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: darkolivegreen;
-    padding: 10px;
-    margin: 10px;
-
-}
-
-
-*/

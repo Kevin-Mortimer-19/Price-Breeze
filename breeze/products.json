@@ -1,22 +1,380 @@
 [
-    {"prod_name":"Chocolate Mousse Torte Cake","description":"Two rich, chocolate cake layers are filled with luscious chocolate whipped cream mousse, then covered with milk chocolate frosting and a dark chocolate glaze. This best selling delight is then garnished with fudge rosettes and dark chocolate shaves. Includes a Chocolate Occasion Plaque, matching Greeting Card and is packaged in an elegant gift box!","category":"Bakery","store":"Gaston’s Bakery", "expDate":"05/15/2017","mfdDate":"05/10/2017","size":"7 inches in diameter","price":42.95,"stock":"5","images":["/public/images/chocolate-mousse-torte-cake.png"],"suggestion":["Serves 6 to 8","Ships Nationwide in Refrigerated Packaging","Certified Kof-K Kosher"],"allegations":["Unless otherwise noted, products contain milk, wheat, soy and egg, and were produced on equipment that processes peanuts, almonds, hazelnuts, pecans, walnuts.","Our facility is not Gluten Free."]},
-    {"prod_name":"Triple Chocolate Enrobed Brownie Cake","description":"This is the perfect cake for the true chocolate lover. Our dense, moist brownie cake is covered in not one, but three layers of decadent chocolate. The cake is coated with a rich chocolate fondant icing, showered with dark chocolate shavings and then finally drizzled with milk and dark chocolate glazes. This triple-chocolate delight is sure to satisfy any sweet tooth. Each cake is delivered in an elegant gift box with a chocolate occasion plaque and personalized greeting card to celebrate any occasion.","category":"Bakery","store":"Gaston’s Bakery","expDate":"05/16/2017","mfdDate":"05/12/2017","size":"7 inches in diameter","price":39.95,"stock":"2","images":["/public/images/triple-chocolate-enrobed-brownie-cake.png"],"suggestion":["Serves 6 to 8","Certified KOF-K Kosher"],"allegations":["Unless otherwise noted, products contain milk, wheat, soy and egg, and were produced on equipment that processes peanuts, almonds, hazelnuts, pecans, walnuts.","Our facility is not Gluten Free."]},
-    {"prod_name":"Reddi Wip Dairy Whipped Topping Extra Creamy Aerosol Refrigerated","description":"Reddi Wip® Extra Creamy Sweetened Dairy Whipped Topping. Milk from cows. Not treated with artificial growth hormone*. Made with real cream. No artificial flavors or sweeteners. 15 calories per 2 tbsp. Ultra-pasteurized.","category":"Dairy","store":"Daiya Dairy","expDate":"05/14/2017","mfdDate":"08/14/2017","size":"6.5 oz can","price":3.19,"stock":"7","images":["/public/images/reddi-wip-dairy-whipped-topping-extra-creamy-aerosol-refrigerated-1.jpg","/public/images/reddi-wip-dairy-whipped-topping-extra-creamy-aerosol-refrigerated-2.jpg","/public/images/reddi-wip-dairy-whipped-topping-extra-creamy-aerosol-refrigerated-3.jpg"],"suggestion":[" Shake it! Shake it! 4 times before use then remove cap.","Turn can completely upside down and press nozzle sideways with finger.","Rinse nozzle thoroughly with warm water. "],"allegations":["Contains: milk.","Deliberately concentrating and inhaling the contents can be harmful or fatal.","Contents under pressure.","Do not expose to temperatures above 120 degrees F.","Do not puncture or incinerate can.","Keep out of the reach of children.","Choking hazard, cap contains small parts."]},
-    {"prod_name":"Red Velvet Chocolate Cake","description":"A truly decadent southern classic: two rich layers of red chocolate cake, fill and covered with the finest, pure cream cheese frosting, and then garnished with white chocolate sprinkles around the sides. Includes a Chocolate Occasion Plaque, matching Greeting Card and is packaged in an elegant gift box!","category":"Bakery","store":"Cake Factory","expDate":"05/18/2017","mfdDate":"05/15/2017","size":"7 inches in diameter","price":42.95,"stock":"4","images":["/public/images/red-velvet-chocolate-cake.png"],"suggestion":["Serves 6 to 8","Certified KOF-K Kosher","Ships Nationwide in Refrigerated Packaging"],"allegations":["Unless otherwise noted, products contain milk, wheat, soy and egg, and were produced on equipment that processes peanuts, almonds, hazelnuts, pecans, walnuts.","Our facility is not Gluten Free."]},
-    {"prod_name":"Rice Dream Original Non-Dairy Beverage Organic","description":"Rice Dream® Organic Original Enriched Rice Drink. Value size. Calcium \u0026 vitamin D. Easy to digest. USDA Organic. Non GMO project.","category":"Dairy","store":"Rice Dream","expDate":"05/14/2017","mfdDate":"05/17/2017","size":"64 oz ctn","price":5.19,"stock":"21","images":["/public/images/rice-dream-original-non-dairy-beverage-organic-1.jpg","/public/images/rice-dream-original-non-dairy-beverage-organic-2.jpg"],"suggestion":["Shake well.","Serve chilled.","Stays fresh 7-10 days in refrigerator after opening."],"allegations":["Not for use as an infant formula.","For children under age 5, consult your child's doctor."]},
-    {"prod_name":"Member's Mark Mini Plain Sliced Bagels","description":"Kettle boiled like they do in the Big Apple, these heat-and-serve mini bagels are made with premium ingredients like real yeast and triple-filtered water.","category":"Bakery","store":"Member's Mark","expDate":"05/28/2017","mfdDate":"05/15/2017","size":"12ct","price":20.99,"stock":"3","images":["/public/images/members-mark-mini-plain-sliced-bagels.jpg"],"suggestion":["Authentic New York-style kettle boiled bagels","Soft, chewy and delicious","The taste and quality you'd expect from your local bagel shop","Mini sized for snacking"],"allegations":[]},
-    {"prod_name":"Daiya Dairy Free Greek Yogurt Black Cherry","description":"Daiya Dairy Free Black Cherry Greek Yogurt Style. New. Rich \u0026 creamy \u0026 lots of fruit. Deliciously Dairy-Free®. Soy free. 8g protein*. 3g* fiber. Excellent source of calcium. Probiotics. Excellent source of Vitamin B12.","category":"Dairy","store":"Daiya Dairy","expDate":"05/13/2017","mfdDate":"05/15/2017","size":"5.3 oz cup","price":1.95,"stock":"15","images":["/public/images/daiya-dairy-free-greek-yogurt-black-cherry-1.jpg","/public/images/daiya-dairy-free-greek-yogurt-black-cherry-2.jpg","/public/images/daiya-dairy-free-greek-yogurt-black-cherry-3.jpg"],"suggestion":["Keep refrigerated."],"allegations":["Contains coconut."]},
-    {"prod_name":"Daily Chef Mini Candy Cookies","description":"Delicious mini candy cookies baked fresh in Club.","category":"Bakery","store":"Daily Chef","expDate":"05/30/2017","mfdDate":"05/15/2017","size":"36ct","price":28.99,"stock":"12","images":["/public/images/daily-chef-mini-candy-cookies.jpg"],"suggestion":[],"allegations":[]},
-    {"prod_name":"So Delicious Cultured Coconut Milk Yogurt Vanilla Dairy \u0026 Soy Free Organic","description":"So Delicious® Dairy Free Coconut Milk Yogurt Alternative Vanilla. Made with organic coconut. Net Wt. 5.3 oz (150 g). Certified Vegan. Certified Gluten-Free®.","category":"Dairy","store":"So Delicious","expDate":"05/14/2017","mfdDate":"05/18/2017","size":"5.3 oz cup","price":2.09,"stock":"15","images":["/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-1.jpg","/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-2.jpg"],"suggestion":["Keep refrigerated."],"allegations":["Contains coconut.","Produced in a facility that also processes other tree nuts and soy.","We apply strict quality control measures to prevent contamination by undeclared food allergens"]},
-    {"prod_name":"Gaston’s Bakery Small Puff Pastry Squares","description":"Easily create delicious pies, savory hors d’oeuvres, tarts, baklava and more with these ready-to-use puff pastry squares. Puff pastry bakes up light and flaky and pairs perfectly with a wide range of toppings and fillings.","category":"Bakery","store":"Gaston’s Bakery","expDate":"05/18/2017","mfdDate":"05/13/2017","size":"32 pieces","price":39.95,"stock":"2","images":["/public/images/gastons-bakery-small-puff-pastry-squares.jpg"],"suggestion":[],"allegations":["Not available to ship to Hawaii or Alaska.","Contains wheat and milk"]},
-    {"prod_name":"Signature Bakery Assortment","description":"Our Signature Bakery Assortment is ideal when you need a cookie delivery. This bakery gift is filled with baked goods such as lemon poppyseed coffee cake and baklava handcrafted in our own bakery. We've added some of our most popular cookie types, from raspberry galettes to Moose Munch® Cookies, to round out this generous collection.","category":"Bakery","store":"Signature Bakery","expDate":"05/24/2017","mfdDate":"05/14/2017","size":"Large","price":59.99,"stock":"6","images":["/public/images/signature-bakery-assortment.jpg"],"suggestion":[],"allegations":["Unless otherwise noted, products contain milk, wheat, soy and egg, and were produced on equipment that processes peanuts, almonds, hazelnuts, pecans, walnuts.","Our facility is not Gluten Free."]},
-    {"prod_name":"Gaston’s Bakery Croissants","description":"Our vendor will ship directly to you. Allow 5-7 business days for delivery. Not available to ship to Hawaii or Alaska. $7.50 handling and shipping fee applied in cart to ensure freshness.","category":"Bakery","store":"Gaston’s Bakery","expDate":"05/25/2017","mfdDate":"05/15/2017","size":"Set of 15","price":34.95,"stock":"8","images":["/public/images/gastons-bakery-croissants-1.jpg","/public/images/gastons-bakery-croissants-2.jpg","/public/images/gastons-bakery-croissants-3.jpg"],"suggestion":["15 ready-to-bake croissants"],"allegations":[]},
-    {"prod_name":"Daiya Dairy Free Greek Yogurt Black Cherry","description":"Daiya Dairy Free Black Cherry Greek Yogurt Style. New. Rich \u0026 creamy \u0026 lots of fruit. Deliciously Dairy-Free®. Soy free. 8g protein*. 3g* fiber. Excellent source of calcium. Probiotics. Excellent source of Vitamin B12.","category":"Dairy","store":"Daiya Dairy","expDate":"05/13/2017","mfdDate":"05/15/2017","size":"5.3 oz cup","price":1.92,"stock":"15","images":["/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-1.jpg","/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-2.jpg"],"suggestion":["Keep refrigerated."],"allegations":["Contains coconut."]},
-    {"prod_name":"Celeste Pizza For One Vegetable Frozen","description":"Celeste® Pizza For One™ Vegetable. Authentic Italian Since 1930. Microwaves In Minutes. Truecookplus®. With Green \u0026 Red Peppers, Mushrooms, Onions \u0026 Olives. ","category":"Frozen","store":"Celeste Pizza","expDate":"03/14/2017","mfdDate":"03/14/2018","size":"5.6 oz box","price":1,"stock":"102","images":["/public/images/celeste-pizza-for-one-vegetable-frozen-1.jpg","/public/images/celeste-pizza-for-one-vegetable-frozen-2.jpg"],"suggestion":["Do not put microwave disk in conventional oven.","Place baking sheet on center oven rack; preheat oven to 400°F.","Remove frozen pizza from carton; unwrap."],"allegations":[]},
-    {"prod_name":"Nestle Coffee-mate Powder Coffee Creamer Original","description":"Nestle® Coffee-Mate® The Original Coffee Creamer. Easy-grip handle. This product is non-dairy, lactose-free, cholesterol-free and gluten-free. Please recycle. Gluten free. Lactose free. Per 1 tsp: 10 calories. 0.5g sat fat, 3% DV. 0mg sodium, 0% DV. 0g sugars.","category":"Dairy","store":"Nestle","expDate":"03/14/2017","mfdDate":"9/14/2017","size":"35.3 oz can","price":6.99,"stock":"12","images":["/public/images/nestle-coffee-matepowder-coffee-creamer-original-1.jpg","/public/images/nestle-coffee-matepowder-coffee-creamer-original-2.jpg","/public/images/nestle-coffee-matepowder-coffee-creamer-original-3.jpg"],"suggestion":["Spoon Coffee-Mate into prepared coffee, tea, or cocoa.","Stir and enjoy!"],"allegations":["Contains: a milk derivative."]},
-    {"prod_name":"Nature's Promise Free from Vanilla Almond Milk Refrigerated","description":"Nature's Promise™ Vanilla Almondmilk. Free from: Artificial colors. Artificial flavors. Artificial preservatives. Naturally flavored. Calcium enriched. Excellent source of vitamin D. Lactose \u0026 dairy free.","category":"Dairy","store":"Nature's Promise","expDate":"05/14/2017","mfdDate":"05/16/2017","size":"32 oz ctn","price":2.02,"stock":"1","images":["/public/images/natures-promise-free-from-vanilla-almond-milk-refrigerated-1.jpg","/public/images/natures-promise-free-from-vanilla-almond-milk-refrigerated-2.jpg"],"suggestion":["Shake well + serve chilled.","Refrigerate after opening and use within 7-10 days."],"allegations":[]},
-    {"prod_name":"Weight Watchers Smart Ones Thin Crust Pizza Pepperoni","description":"Weight Watchers Smart Ones® Thin Crust Pepperoni Pizza. Savory Italian recipes. With tomato sauce and reduced fat cheese. 17g of protein. U.S. inspected and passed by Department of Agriculture.","category":"Frozen","store":"Weight Watchers","expDate":"05/14/2017","mfdDate":"01/14/2018","size":"4.4 oz box","price":2.39,"stock":"51","images":["/public/images/weight-watchers-smart-ones-thin-crust-pizza-pepperoni-1.jpg","/public/images/weight-watchers-smart-ones-thin-crust-pizza-pepperoni-2.jpg"],"suggestion":["Keep frozen.","Do not put microwave disk in conventional oven.","Open carton at perforated strip.","Remove frozen pizza from carton; unwrap."],"allegations":[]},
-    {"prod_name":"Kellogg's Special K Flatbread Breakfast Sandwich, Sausage, Egg, and Cheese","description":"Craving something warm and delicious to help you start your morning? Add a breakfast revelation to your morning routine. Special K Flatbread Breakfast Sandwiches are a mouthwatering way to start your day on the right track. Multigrain flatbread, real eggs, sausage and cheese will help keep your taste buds very happy.","category":"Frozen","store":"Kellogg's","expDate":"04/11/2017","mfdDate":"04/10/2018","size":"4 ct","price":7.49,"stock":"11","images":["/public/images/kelloggs-special-k-flatbread-breakfast-sandwich-sausage-egg-and-cheese.jpg"],"suggestion":["Keep frozen."],"allegations":["Contains Eggs","Contains Wheat","Contains Milk Ingredients"]},
-    {"prod_name":"Kellogg's Eggo Chocolate Chip Waffles","description":"Get a sweet start to your morning with Eggo® Chocolate Chip waffles. They have a light, crispy texture and a yummy chocolatey taste that makes eating breakfast a real delight! (from Kellogg's)","category":"Frozen","store":"Kellogg's","expDate":"05/14/2017","mfdDate":"08/14/2017","size":"10 ct","price":3.32,"stock":"11","images":["/public/images/kelloggs-eggo-chocolate-chip-waffles.jpg"],"suggestion":["Keep frozen."],"allegations":["Contains Eggs","Contains Wheat","Contains Milk Ingredients","Contains Soy"]},
-    {"prod_name":"Deep Cocktail Samosa (Potato \u0026 Pea)","description":"Crispy triangles filled with spicy potatoes and peas.","category":"Frozen","store":"Deep","expDate":"03/21/2017","mfdDate":"08/03/2017","size":"40 pcs","price":4.99,"stock":"6","images":["/public/images/deep-cocktail-samosa-potato-pea.jpg"],"suggestion":["Keep frozen."],"allegations":["Contains Eggs","High Spices","Contains Preservatives"]}
+  {
+    "prod_name": "Great Value Milk, Vitamin D, Whole - 1 gal (3.78 l)",
+    "price": 4.49,
+    "store": "Walmart",
+    "link": "/url?url=https://www.walmart.com/ip/Great-Value-Whole-Vitamin-D-Milk-Gallon-128-fl-oz/10450114%3Fwl13%3D2341%26selectedSellerId%3D0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECOcM&usg=AOvVaw3X9mn5_DP9e4Jm1-CTLyUT"
+  },
+  {
+    "prod_name": "Fairlife Milk, Ultra-Filtered, Fat Free - 52 fl oz",
+    "price": 3.99,
+    "store": "Target",
+    "link": "/url?url=https://www.walmart.com/ip/Great-Value-Whole-Vitamin-D-Milk-Gallon-128-fl-oz/10450114%3Fwl13%3D2341%26selectedSellerId%3D0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECOkM&usg=AOvVaw0C40EUrNBEm_KrczhtSa33"
+  },
+  {
+    "prod_name": "Market Pantry Milk, Whole - 0.5 gl (1.89 lt)",
+    "price": 1.99,
+    "store": "Target",
+    "link": "/url?url=https://www.target.com/p/fairlife-lactose-free-skim-milk-52-fl-oz/-/A-17093210%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-6&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECPoM&usg=AOvVaw2_naXCtQxbpzQFdEI2EXGl"
+  },
+  {
+    "prod_name": "Great Value Milk, 2% Reduced Fat, 2% Milkfat - 1 gl (3.78 lt)",
+    "price": 4.5,
+    "store": "AirStore1.com",
+    "link": "/url?url=https://www.target.com/p/fairlife-lactose-free-skim-milk-52-fl-oz/-/A-17093210%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-6&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECPsM&usg=AOvVaw1M9si6rHWVSizJJI0KqXPD"
+  },
+  {
+    "prod_name": "Friendly Farms Whole Milk - 0.5 Gal",
+    "price": 2.15,
+    "store": "Instacart",
+    "link": "/url?url=https://www.target.com/p/vitamin-d-whole-milk-0-5gal-good-38-gather-8482/-/A-12925351%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-2&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECIsN&usg=AOvVaw1CLyCzCGv27qX4LF6u0Mu_"
+  },
+  {
+    "prod_name": "Good & Gather Whole Milk",
+    "price": 3.99,
+    "store": "Target",
+    "link": "/url?url=https://www.target.com/p/vitamin-d-whole-milk-0-5gal-good-38-gather-8482/-/A-12925351%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-2&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECIwN&usg=AOvVaw1_C0MRocQGD14YMEy0P-Ab"
+  },
+  {
+    "prod_name": "Ripple Milk, Plant-Based, Dairy-Free, Unsweetened, Original - 48 fl oz",
+    "price": 5.99,
+    "store": "FreshDirect",
+    "link": "/url?url=https://airstore1.com/products/great-value-2-reduced-fat-milk-gallon-128-fl-oz.html%3FsetCurrencyId%3D1%26sku%3DMLK-2PCT-RF-VR-12%26srsltid%3DAWLEVJz9UMyFFiaT_DaZBSCDZeFNVrn-TIiujqKgCtxImWCXBm9o_Yn1544&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJ8N&usg=AOvVaw0ey2RL4iFRtiXndiDy1hA0"
+  },
+  {
+    "prod_name": "Horizon Organic Whole Shelf-Stable Milk Boxes - 8 fl oz",
+    "price": 23.17,
+    "store": "Organic Basic Food",
+    "link": "/url?url=https://airstore1.com/products/great-value-2-reduced-fat-milk-gallon-128-fl-oz.html%3FsetCurrencyId%3D1%26sku%3DMLK-2PCT-RF-VR-12%26srsltid%3DAWLEVJz9UMyFFiaT_DaZBSCDZeFNVrn-TIiujqKgCtxImWCXBm9o_Yn1544&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECKAN&usg=AOvVaw3s8rqR1k-YuDkzaVKYA7fz"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Lowfat, Organic - 12 pack, 8 fl oz boxes",
+    "price": 23.17,
+    "store": "Opentip.com",
+    "link": "/url?url=https://www.instacart.com/landing%3Fproduct_id%3D18647583%26retailer_id%3D12%26utm_term%3Dpbi-0%26utm_campaign%3Dwhole-milk_aldi%26utm_source%3Dinstacart_google%26utm_medium%3Dshopping_free_listing%26utm_content%3Dproductid-18647583_retailerid%3D12%26region_id%3D7368474113&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECKwN&usg=AOvVaw24AbQ_Zc92c3Ler3vvumDq"
+  },
+  {
+    "prod_name": "Market Pantry Milk, Reduced Fat, 2% Milkfat - 1 gl (3.78 lt)",
+    "price": 3.79,
+    "store": "Target",
+    "link": "/url?url=https://www.instacart.com/landing%3Fproduct_id%3D18647583%26retailer_id%3D12%26utm_term%3Dpbi-0%26utm_campaign%3Dwhole-milk_aldi%26utm_source%3Dinstacart_google%26utm_medium%3Dshopping_free_listing%26utm_content%3Dproductid-18647583_retailerid%3D12%26region_id%3D7368474113&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECK0N&usg=AOvVaw3Htf3DR7CsSQsPq_ImypWI"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Vitamin D, Organic - 1 gallon (3.78 l)",
+    "price": 9.77,
+    "store": "rehmie.com",
+    "link": "/url?url=https://www.target.com/p/organic-whole-milk-0-5gal-good-gather-8482/-/A-54575911%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-6&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECLsN&usg=AOvVaw3z5Bept2UZ2wPpMxCbkBmE"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Lowfat, Vanilla - 6 pack, 8 fl oz milk boxes",
+    "price": 11.59,
+    "store": "ShopFoodEx.com",
+    "link": "/url?url=https://www.target.com/p/organic-whole-milk-0-5gal-good-gather-8482/-/A-54575911%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-6&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECLwN&usg=AOvVaw314mR3Gy_azguvvC85SiXl"
+  },
+  {
+    "prod_name": "Nestle Nido Fortificada Dry Milk Powder - 56.3 oz can",
+    "price": 16.29,
+    "store": "Truegether - MeridianCommerce",
+    "link": "/url?url=https://www.freshdirect.com/pdp.jsp%3FcatId%3Ddai_milk_non_other%26productId%3Ddai_pid_2003656&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECM4N&usg=AOvVaw1185-HUKMhtouBV53zaC57"
+  },
+  {
+    "prod_name": "Lactaid Whole Milk - 96 oz jug",
+    "price": 5.87,
+    "store": "Walmart",
+    "link": "/url?url=https://www.freshdirect.com/pdp.jsp%3FcatId%3Ddai_milk_non_other%26productId%3Ddai_pid_2003656&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECM8N&usg=AOvVaw06TxPllYgdWzGPJV6tqyyJ"
+  },
+  {
+    "prod_name": "Fairlife Milk, Lactose Free, Ultra-Filtered, Whole - 52 fl oz",
+    "price": 6.39,
+    "store": "Instacart",
+    "link": "/url?url=https://www.organicbasicfood.com/horizon-organic-dairy-milk-asptc-plain-whole-1-each-12-8-fz-hg2403921&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECN8N&usg=AOvVaw0PyuQCvCudS92yZU2efC0X"
+  },
+  {
+    "prod_name": "A2 Milk Milk, Whole, Ultra-Pasteurized - 59 fl oz",
+    "price": 4.69,
+    "store": "Farmstead Grocery Delivery",
+    "link": "/url?url=https://www.organicbasicfood.com/horizon-organic-dairy-milk-asptc-plain-whole-1-each-12-8-fz-hg2403921&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECOAN&usg=AOvVaw1A-tJA4b04cXutQi7ke6GY"
+  },
+  {
+    "prod_name": "Garelick Farms Dairy Pure Milk, Whole, Vitamin D - 1 qt",
+    "price": 2.5,
+    "store": "pointy.com/shops/usa/massachusetts/tyngsborough/bridgeview-liquor-plus-craft-beer-and-convenience-store",
+    "link": "/url?url=https://www.opentip.com/Horizon-Organic-Dairy-Organic-Low-Fat-1-Milk-Aseptic-12-8-fl-oz-p-11071652.html%3Fats%3Dgs%26srsltid%3DAWLEVJy-tFzpBhnH4gJewYa0s3dtSb2H6kh2ADgCU_ngadJcwTrjvD3unl0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPkN&usg=AOvVaw186gUUfbwbO2fS1W2P7TOe"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Organic, Lowfat - 6 pack, 8 fl oz containers",
+    "price": 30.99,
+    "store": "fantastic-deals.com",
+    "link": "/url?url=https://www.opentip.com/Horizon-Organic-Dairy-Organic-Low-Fat-1-Milk-Aseptic-12-8-fl-oz-p-11071652.html%3Fats%3Dgs%26srsltid%3DAWLEVJy-tFzpBhnH4gJewYa0s3dtSb2H6kh2ADgCU_ngadJcwTrjvD3unl0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPsN&usg=AOvVaw2rsom-Yv7auZmDS1UzG3pM"
+  },
+  {
+    "prod_name": "Natrel Skim Shelf Stable Milk, 32 oz, 6 Pack",
+    "price": 49.07,
+    "store": "RateKitchen.com",
+    "link": "/url?url=https://www.target.com/p/2-reduced-fat-milk-1gal-good-38-gather-8482/-/A-13276204%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-2&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECIoO&usg=AOvVaw2dcQs9blbFoiYXrxEYskcl"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Lowfat, Strawberry - 6 pack, 8 fl oz milk boxes",
+    "price": 52.66,
+    "store": "ibshops",
+    "link": "/url?url=https://www.target.com/p/2-reduced-fat-milk-1gal-good-38-gather-8482/-/A-13276204%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-2&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECIsO&usg=AOvVaw0aTXBJgYTZYsKoaeBbhG4U"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Lowfat, Organic, Chocolate - 6 pack, 8 fl oz milk boxes",
+    "price": 46.13,
+    "store": "OliveTips.com",
+    "link": "/url?url=https://rehmie.com/itm/horizon-organic-vitamin-d-milk-1gal-255719%3Fsrsltid%3DAWLEVJxl9mPVkfN83Mkbg5Tl0tWnIsX_0GgxC7Y_igeQWovoVOAfkwnW4M4&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJ4O&usg=AOvVaw3mA2Lzeae2w8VcV0Q8rj8S"
+  },
+  {
+    "prod_name": "Prairie Farms Milk, Whole - gallon (3.78 l)",
+    "price": 4.49,
+    "store": "Target",
+    "link": "/url?url=https://rehmie.com/itm/horizon-organic-vitamin-d-milk-1gal-255719%3Fsrsltid%3DAWLEVJxl9mPVkfN83Mkbg5Tl0tWnIsX_0GgxC7Y_igeQWovoVOAfkwnW4M4&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJ8O&usg=AOvVaw2Dxx_1Fz0A2alyXk6FWtJI"
+  },
+  {
+    "prod_name": "Parmalat Milk, Lactose Free - 32 fl oz",
+    "price": 5.19,
+    "store": "ShopFoodEx.com",
+    "link": "/url?url=https://shopfoodex.com/horizon-organic-dha-omega3-vanilla-lowfat-milk-6-pack8-oz-cartons-p-58194.html%3Futm_source%3DGoogle%26utm_medium%3DMerchant%252BCenter%26utm_campaign%3DFeed&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECLAO&usg=AOvVaw36Pg4-PE849p0xIqqm08WL"
+  },
+  {
+    "prod_name": "Natrel Whole Milk, 32 Ounce (Pack of 6)",
+    "price": 21.07,
+    "store": "Grocery.com Store",
+    "link": "/url?url=https://shopfoodex.com/horizon-organic-dha-omega3-vanilla-lowfat-milk-6-pack8-oz-cartons-p-58194.html%3Futm_source%3DGoogle%26utm_medium%3DMerchant%252BCenter%26utm_campaign%3DFeed&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECLEO&usg=AOvVaw0wqPsrC3Ysr9f84MWLtAZh"
+  },
+  {
+    "prod_name": "Lactaid Reduced Fat 2% Milk - 96 fl oz jug",
+    "price": 5.79,
+    "store": "Instacart",
+    "link": "/url?url=https://www.truegether.com/listing.html%3Fid%3DUSER.f702f389-81aa-4a30-8714-0ffd902e7026&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECMEO&usg=AOvVaw0BY9ibxVPf1abI90s9tKOa"
+  },
+  {
+    "prod_name": "Natrel Milk 2%, 32 Ounce (Pack of 6)",
+    "price": 37.14,
+    "store": "LnBMall.com",
+    "link": "/url?url=https://www.truegether.com/listing.html%3Fid%3DUSER.f702f389-81aa-4a30-8714-0ffd902e7026&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECMIO&usg=AOvVaw2TJslKZcdIcOns18EyFfPw"
+  },
+  {
+    "prod_name": "Tache Unsweetened Original Pistachio Milk",
+    "price": 7.79,
+    "store": "Thrive Market",
+    "link": "/url?url=https://www.walmart.com/ip/Lactaid-100-Lactose-Free-Whole-Vitamin-D-Milk-96-fl-oz/23619910%3Fwl13%3D2341%26selectedSellerId%3D0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECNQO&usg=AOvVaw0tv7uykzScGwiA4XjToQSH"
+  },
+  {
+    "prod_name": "Horizon Organic Growing Years Milk, Whole, Organic - half gallon (1.89 l)",
+    "price": 6.59,
+    "store": "FreshDirect",
+    "link": "/url?url=https://www.walmart.com/ip/Lactaid-100-Lactose-Free-Whole-Vitamin-D-Milk-96-fl-oz/23619910%3Fwl13%3D2341%26selectedSellerId%3D0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECNUO&usg=AOvVaw3Nf8mXMiyGlZ4H2uvvbqba"
+  },
+  {
+    "prod_name": "Thai Kitchen Coconut Milk, Unsweetened - 13.66 fl oz",
+    "price": 3.19,
+    "store": "Swanson Health Products",
+    "link": "/url?url=https://www.instacart.com/landing%3Fproduct_id%3D18075470%26retailer_id%3D374%26utm_term%3Dpbi-0%26utm_campaign%3Dwhole-ultra-filtered-milk_star-markets%26utm_source%3Dinstacart_google%26utm_medium%3Dshopping_free_listing%26utm_content%3Dproductid-18075470_retailerid%3D374%26region_id%3D4443400263&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECOYO&usg=AOvVaw0t--3xCcX85qWksIV2ICYD"
+  },
+  {
+    "prod_name": "Similac Advance Infant Formula with Iron, Milk-Based, OptiGro - 13 fl oz",
+    "price": 6.29,
+    "store": "Mercato.com",
+    "link": "/url?url=https://www.instacart.com/landing%3Fproduct_id%3D18075470%26retailer_id%3D374%26utm_term%3Dpbi-0%26utm_campaign%3Dwhole-ultra-filtered-milk_star-markets%26utm_source%3Dinstacart_google%26utm_medium%3Dshopping_free_listing%26utm_content%3Dproductid-18075470_retailerid%3D374%26region_id%3D4443400263&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECOcO&usg=AOvVaw2xZD1TtD4-Q8vVfVmH4JJv"
+  },
+  {
+    "prod_name": "Organic 2% Milk - 0.5gal - Good & Gather",
+    "price": 4.15,
+    "store": "rehmie.com",
+    "link": "/url?url=https://www.farmsteadapp.com/hub_items/page/26425-the-a2-milk-company-the-a2-milk-company-whole-a2-milk-59-oz&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPYO&usg=AOvVaw0tuvWbw791mK9nWmBeR4HY"
+  },
+  {
+    "prod_name": "Stonyfield Organic Whole Milk - 0.5 gl (1.89 l)",
+    "price": 5.0,
+    "store": "Gopuff",
+    "link": "/url?url=https://www.farmsteadapp.com/hub_items/page/26425-the-a2-milk-company-the-a2-milk-company-whole-a2-milk-59-oz&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPcO&usg=AOvVaw2wSl1_Is5bCEHkgAwFIegp"
+  },
+  {
+    "prod_name": "Breville BMF600XL Milk Cafe Milk Frother",
+    "price": 149.95,
+    "store": "Williams-Sonoma",
+    "link": "/url?url=/shopping/product/15872618064586287999%3Fprds%3Doid:3064570513762965468%26sts%3D9%26hl%3Den%26lsf%3Dseller:464425533,store:11395810064138610071,s:h&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECIgP&usg=AOvVaw0ENxPg7hFPNbg7XCD6cdGK"
+  },
+  {
+    "prod_name": "Borden Milk, Whole - 1 qt",
+    "price": 15.0,
+    "store": "Dollar Tree",
+    "link": "/url?url=/shopping/product/15872618064586287999%3Fprds%3Doid:3064570513762965468%26sts%3D9%26hl%3Den%26lsf%3Dseller:464425533,store:11395810064138610071,s:h&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECIkP&usg=AOvVaw1B0BDWBNgJb-dXpft9GMkS"
+  },
+  {
+    "prod_name": "Great Value Milk, Low Fat, Chocolate, 1% Milkfat - 1 gl (3.78 lt)",
+    "price": 4.49,
+    "store": "Walmart",
+    "link": "/url?url=/shopping/product/9721255755068379892%3Fq%3Dmilk%26rlz%3D1C1MMCH_enUS934US934%26biw%3D1858%26bih%3D1097%26prds%3Deto:12382388710170668292_1,rsk:CID_9721255755068379892&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJoP&usg=AOvVaw1_m1tzDPxWaFnHrUaWlrgG"
+  },
+  {
+    "prod_name": "Turkey Hill 2% Reduced Fat Milk 8 oz. - 50/Case",
+    "price": 26.99,
+    "store": "WebstaurantStore.com",
+    "link": "/url?url=/shopping/product/9721255755068379892%3Fq%3Dmilk%26rlz%3D1C1MMCH_enUS934US934%26biw%3D1858%26bih%3D1097%26prds%3Deto:12382388710170668292_1,rsk:CID_9721255755068379892&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJsP&usg=AOvVaw0-q_P6Zgq1WnOPG3nzyH_w"
+  },
+  {
+    "prod_name": "Horizon Organic Milk, Lowfat, Organic, Strawberry - 12 pack, 8 fl oz milk boxes",
+    "price": 26.29,
+    "store": "Groceryeshop",
+    "link": "/url?url=https://ratekitchen.com/products/natrel-skim-milk-32-ounce-pack-of-6-shelf-stable-milk-gluten-free-kosher-non-gmo-no-refrigeration-needed-fresh-taste-that-lasts-for-months-made-in-the-u-s-a%3Fvariant_id%3D476989&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECKoP&usg=AOvVaw3tYKd1PESbCi9xJaH_68rJ"
+  },
+  {
+    "prod_name": "Lactaid Milk, Fat Free - half gallon (1.89 l)",
+    "price": 5.19,
+    "store": "Nabs One Stop Shop",
+    "link": "/url?url=https://ratekitchen.com/products/natrel-skim-milk-32-ounce-pack-of-6-shelf-stable-milk-gluten-free-kosher-non-gmo-no-refrigeration-needed-fresh-taste-that-lasts-for-months-made-in-the-u-s-a%3Fvariant_id%3D476989&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECKsP&usg=AOvVaw0hF7geRbO9POjfT0jibfDo"
+  },
+  {
+    "prod_name": "Lactaid Milk, Fat Free - 96 fl oz",
+    "price": 5.79,
+    "store": "Instacart",
+    "link": "/url?url=https://ibshops.com/products/horizon-organic-dairy-single-serve-1-strawberry-milk-8-fl-oz-6-count&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECLsP&usg=AOvVaw0zrbow-PvJOLrBAkSvliM2"
+  },
+  {
+    "prod_name": "Nido Fortificada Milk, Whole, Dry - 4.85 lb",
+    "price": 19.46,
+    "store": "Sam's Club",
+    "link": "/url?url=https://ibshops.com/products/horizon-organic-dairy-single-serve-1-strawberry-milk-8-fl-oz-6-count&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECLwP&usg=AOvVaw3e2YKdYOTtc8zvcpCiO8LX"
+  },
+  {
+    "prod_name": "Horizon Organic American Grassfed Milk, Vitamin D, Organic, Grassfed - half ...",
+    "price": 6.93,
+    "store": "rehmie.com",
+    "link": "/url?url=https://www.olivetips.com/products/horizon-milk-1-percent-chocolate-48-oz%3Fvariant_id%3D533821&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECNAP&usg=AOvVaw3mBAdPoyFhFKLiVCGr9wE-"
+  },
+  {
+    "prod_name": "Enfamil Infant Formula, Milk-Based Powder with Iron, 0-12 Months - 12.5 oz",
+    "price": 17.99,
+    "store": "Walgreens.com",
+    "link": "/url?url=https://www.olivetips.com/products/horizon-milk-1-percent-chocolate-48-oz%3Fvariant_id%3D533821&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECNEP&usg=AOvVaw0OIC-kbVhYxz3hMwJG4Ijd"
+  },
+  {
+    "prod_name": "Alexandre Family Farm Organic A2/A2 Vat Pasteurized Milk - 48 fl oz",
+    "price": 7.35,
+    "store": "Azure Standard",
+    "link": "/url?url=https://www.target.com/p/prairie-farms-vitamin-d-whole-milk-1gal/-/A-47103206%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-2&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECOAP&usg=AOvVaw1iIMuI97nKYJBQXqmIJbKZ"
+  },
+  {
+    "prod_name": "Garelick Farms 2% Reduced Fat Milk - 0.5 gal jug",
+    "price": 3.5,
+    "store": "pointy.com/shops/usa/massachusetts/tyngsborough/bridgeview-liquor-plus-craft-beer-and-convenience-store",
+    "link": "/url?url=https://www.target.com/p/prairie-farms-vitamin-d-whole-milk-1gal/-/A-47103206%3Fref%3Dtgt_adv_XS000000%26AFID%3Dgoogle_pla_df_free_local%26CPNG%3DGrocery%26adgroup%3D284-2&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQ_uQECOEP&usg=AOvVaw3gGzPTh4SvJMrWjQ-Kv2oL"
+  },
+  {
+    "prod_name": "White Peach Body Milk Moisturizer | Fourth Ray Beauty",
+    "price": 14.4,
+    "store": "ColourPop Cosmetics",
+    "link": "/url?url=https://shopfoodex.com/parmalat-lactose-free-2-milk-32-oz-carton-p-66745.html%3Futm_source%3DGoogle%26utm_medium%3DMerchant%252BCenter%26utm_campaign%3DFeed&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPIP&usg=AOvVaw3cTOJ_h7KmkjybIzkEf4th"
+  },
+  {
+    "prod_name": "Shamrock Farms Milk, 2% Reduced Fat, Strawberry - 12 fl oz",
+    "price": 1.25,
+    "store": "Gopuff",
+    "link": "/url?url=https://shopfoodex.com/parmalat-lactose-free-2-milk-32-oz-carton-p-66745.html%3Futm_source%3DGoogle%26utm_medium%3DMerchant%252BCenter%26utm_campaign%3DFeed&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPMP&usg=AOvVaw3p4WKHjiXlQXpQ4n78rO2i"
+  },
+  {
+    "prod_name": "Milk Makeup Mini Vegan Milk Moisturizer - 15 ml",
+    "price": 19.0,
+    "store": "Sephora",
+    "link": "/url?url=https://www.grocery.com/store/natrel-whole-milk-32-ounce-pack-of-6%3Flanguage%3Den%26currency%3DUSD&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECIQQ&usg=AOvVaw0GkhrFwLx5B3rR2-wRbLuM"
+  },
+  {
+    "prod_name": "Equate Milk of Magnesia, Original - 26 fl oz",
+    "price": 19.79,
+    "store": "Bonanza - ThreeSixNine369",
+    "link": "/url?url=https://www.grocery.com/store/natrel-whole-milk-32-ounce-pack-of-6%3Flanguage%3Den%26currency%3DUSD&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECIUQ&usg=AOvVaw18_5aEeSuWU_SC1vbwZrpD"
+  },
+  {
+    "prod_name": "Meyenberg Goat Milk, Whole Powdered - 12 oz",
+    "price": 14.03,
+    "store": "Health Central USA",
+    "link": "/url?url=https://www.instacart.com/landing%3Fproduct_id%3D16408615%26retailer_id%3D231%26utm_term%3Dpbi-0%26utm_campaign%3D2-reduced-fat-milk_wegmans%26utm_source%3Dinstacart_google%26utm_medium%3Dshopping_free_listing%26utm_content%3Dproductid-16408615_retailerid%3D231%26region_id%3D1826718305&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJUQ&usg=AOvVaw3FNDLcmG0a2bVzXagpwTb6"
+  },
+  {
+    "prod_name": "Dairy Pure Milk, Chocolate, 1% Lowfat - 1 gallon (3.78 l)",
+    "price": 5.79,
+    "store": "Instacart",
+    "link": "/url?url=https://www.instacart.com/landing%3Fproduct_id%3D16408615%26retailer_id%3D231%26utm_term%3Dpbi-0%26utm_campaign%3D2-reduced-fat-milk_wegmans%26utm_source%3Dinstacart_google%26utm_medium%3Dshopping_free_listing%26utm_content%3Dproductid-16408615_retailerid%3D231%26region_id%3D1826718305&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECJYQ&usg=AOvVaw1ig5NoT4Ta3iMVAKTB06Gd"
+  },
+  {
+    "prod_name": "Best Yet 2% Milk - 1 Fluid Ounce - Fruit Fair - Delivered by Mercato",
+    "price": 5.09,
+    "store": "Mercato.com",
+    "link": "/url?url=https://lnbmall.com/products/natrel-2-milk-32-ounce-pack-of-6-shelf-stable-milk-gluten-free-kosher-non-gmo-no-refrigeration-needed-fresh-taste-that-lasts-for-months-made-in-the-u-s-a%3Fvariant_id%3D445860&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECKYQ&usg=AOvVaw2FKUAnFXc0PP8iM0bsftAX"
+  },
+  {
+    "prod_name": "Core Power High Protein Milk Shake, Vanilla, 14 fl oz",
+    "price": 35.89,
+    "store": "Zulily",
+    "link": "/url?url=https://lnbmall.com/products/natrel-2-milk-32-ounce-pack-of-6-shelf-stable-milk-gluten-free-kosher-non-gmo-no-refrigeration-needed-fresh-taste-that-lasts-for-months-made-in-the-u-s-a%3Fvariant_id%3D445860&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECKcQ&usg=AOvVaw1GJsIgo_7GjffctGdTedRL"
+  },
+  {
+    "prod_name": "Hood Milk, 1% Lowfat - 1 gal (3.78 l)",
+    "price": 3.99,
+    "store": "Target",
+    "link": "/url?url=https://thrivemarket.com/p/tche-pistachio-milk-unsweetened%3Futm_source%3Dgoogle%26utm_medium%3Dpla_smart&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECLUQ&usg=AOvVaw3XUkV-yluV_SjRFo5OcKpP"
+  },
+  {
+    "prod_name": "So Delicious Coconut Milk, Vanilla - 32 fl oz carton",
+    "price": 3.29,
+    "store": "Vitacost.com",
+    "link": "/url?url=https://thrivemarket.com/p/tche-pistachio-milk-unsweetened%3Futm_source%3Dgoogle%26utm_medium%3Dpla_smart&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECLYQ&usg=AOvVaw1M_RbfMVyRzqefH1zLN_ed"
+  },
+  {
+    "prod_name": "Horizon Organic Instant Dry Whole Milk - 30.6 oz",
+    "price": 30.99,
+    "store": "Snackathon Foods",
+    "link": "/url?url=https://www.freshdirect.com/pdp.jsp%3FcatId%3Ddai_milk%26productId%3Ddai_pid_2004831&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECMQQ&usg=AOvVaw2mSJV1kn956WNahXViRQxQ"
+  },
+  {
+    "prod_name": "Great Value Evaporated Milk, 12 oz, Size: 12 fl oz",
+    "price": 0.94,
+    "store": "Walmart",
+    "link": "/url?url=https://www.freshdirect.com/pdp.jsp%3FcatId%3Ddai_milk%26productId%3Ddai_pid_2004831&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECMUQ&usg=AOvVaw2NMpCr-NTdxpGxiwtoLrcR"
+  },
+  {
+    "prod_name": "Hershey's Milk Chocolate - 1.55 oz",
+    "price": 0.99,
+    "store": "Big Lots",
+    "link": "/url?url=/shopping/product/12203419125250046037%3Fq%3Dmilk%26rlz%3D1C1MMCH_enUS934US934%26biw%3D1858%26bih%3D1097%26prds%3Deto:5876164645627952614_1,rsk:PC_14266248472070422119&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECNQQ&usg=AOvVaw3Thn6R_XBCryvxGqMBtOQH"
+  },
+  {
+    "prod_name": "Lactose Free Vitamin D Milk - 0.5gal - Good & Gather",
+    "price": 3.49,
+    "store": "Target",
+    "link": "/url?url=/shopping/product/12203419125250046037%3Fq%3Dmilk%26rlz%3D1C1MMCH_enUS934US934%26biw%3D1858%26bih%3D1097%26prds%3Deto:5876164645627952614_1,rsk:PC_14266248472070422119&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECNUQ&usg=AOvVaw07gllNlXX5AvmufPdWWAwZ"
+  },
+  {
+    "prod_name": "Shamrock Farms Milk, Whole, Chocolate - 12 fl oz",
+    "price": 2.79,
+    "store": "Gopuff",
+    "link": "/url?url=https://www.mercato.com/item/similac-advance-infant-formula-concentrated-with-iron-birth-to-12-months-13-ounces/105200%3FfeaturedStoreId%3D2148%26region_id%3D42904059&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECOgQ&usg=AOvVaw1ARZDxuKTpis_Zi0q7hztr"
+  },
+  {
+    "prod_name": "Milk Bar Ice Cream, Cereal Milk - 14 fl oz",
+    "price": 12.0,
+    "store": "Milk Bar",
+    "link": "/url?url=https://www.mercato.com/item/similac-advance-infant-formula-concentrated-with-iron-birth-to-12-months-13-ounces/105200%3FfeaturedStoreId%3D2148%26region_id%3D42904059&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECOkQ&usg=AOvVaw3Tp1mvTwOgwFZK6HS8nxqV"
+  },
+  {
+    "prod_name": "Sproud Plant-Based Milk Unsweetened 33.8 fl oz",
+    "price": 3.99,
+    "store": "Target",
+    "link": "/url?url=https://rehmie.com/itm/organic-2-milk-05gal-good-85647%3Fsrsltid%3DAWLEVJx4ongsD-pVDDHtIQI3_S_6LcT92VVJ71johBwCrK9F742z546UqFk&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPkQ&usg=AOvVaw3F6MCH8rTEp_VPpTHSZXsi"
+  },
+  {
+    "prod_name": "Now Foods Soy Milk Powder - 20 oz packet",
+    "price": 8.04,
+    "store": "HerbsPro.com",
+    "link": "/url?url=https://rehmie.com/itm/organic-2-milk-05gal-good-85647%3Fsrsltid%3DAWLEVJx4ongsD-pVDDHtIQI3_S_6LcT92VVJ71johBwCrK9F742z546UqFk&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECPoQ&usg=AOvVaw1PnKoVqKknkrcoPZM2Mon-"
+  },
+  {
+    "prod_name": "Now Foods Lactose Milk Sugar - 16 oz pouch",
+    "price": 3.31,
+    "store": "HerbsPro.com",
+    "link": "/url?url=https://link.gopuff.com/drinks/milk/stonyfield_organic_whole_milk_half_gallon%3Fsrsltid%3DAWLEVJwhnXObyIpqGI7-0bCwwwT77sNd_8bh7ewgvf2QA4YLQ1tGTPP_c9A&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiNuZ3UmKj3AhU6kHIEHfe4DgwQguUECIkR&usg=AOvVaw0edpNMF2822Jp-xF1jnSjD"
+  }
 ]

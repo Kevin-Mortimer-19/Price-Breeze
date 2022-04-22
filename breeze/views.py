@@ -29,7 +29,6 @@ from breeze.shops import *
 
 # View for creating an account
 # Defines the response to form submission and renders the page
-
 def create_account(request):
     if request.method == "POST":
         form = CreateForm(request.POST)
@@ -51,7 +50,6 @@ def log_in(request):
 
 # View for the home/search page
 # defines responses to search inputs and add button interactions
-
 def home(request):
 	form = searchFor()
 	if request.method == "POST":
@@ -113,7 +111,6 @@ def password_reset_request(request):
 
 # View for handling the shopping list page
 # Handles a form submission from the search page, and displays a User's ShoppingList
-
 def list(request):
 	list = ShoppingList.objects.get(userid=request.user)
 	if request.method == "POST":
@@ -127,14 +124,14 @@ def list(request):
 def password_change_form(request):
      form = PasswordChangeForm(request.POST)
      return render(request, "password_reset_confirm.html")
+
 # View for  showing the user profile
 def user_profile_view(request):
      user_profile_form = UserProfileForm(request.POST)
      return render(request, "user_profile.html",{'user_profile_form':user_profile_form})
 
+
 #table output views for sorting urls
-
-
 def table(request):
 #initial table
 	output = startTable()
