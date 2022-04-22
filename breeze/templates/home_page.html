@@ -66,11 +66,6 @@
     {% if results is None %}
     {% else %}
         <div id = "table" >
-            <!--{% include "result.html" %}-->
-            <table border="1" class="dataframe">
-            {% include "item_table_headers.html" %}
-            {% include "item_table_entry.html" %} 
-            </table>
 
             <button onclick="location.href='{%url 'highPrice'%}'"type="button">Sort Highest to Lowest by Price</button>
             <button onclick="location.href='{%url 'lowPrice'%}'"type="button">Sort Lowest to Highest by Price</button>
@@ -79,6 +74,12 @@
             <button onclick="location.href='{%url 'lowStore'%}'"type="button">Sort A-Z by Store Name</button>
             <button onclick="location.href='{%url 'highStore'%}'"type="button">Sort Z-A by Store Name</button>
             <button onclick="location.href='{%url 'reset'%}'"type="button">Reset Results (Display by Relevance)</button>
+            
+            <!--{% include "result.html" %}-->
+            <table border="1" class="dataframe">
+            {% include "item_table_headers.html" %}
+            {% include "item_table_entry.html" %} 
+            </table>
         </div>
 
     {% endif %}
