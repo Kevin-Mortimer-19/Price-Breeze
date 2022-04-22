@@ -6,14 +6,14 @@ Price Breeze is a web application designed to make trips to the grocery store mo
 
 ## Features
 1. Account Management
-  * Create account
-  * Reset password
+   - Create account
+   - Reset password
 2. Search within platform
-  * Web search
+   - Web search
 3. Sort products
-  * Sort by factors such as price and product name
+   - Sort by factors such as price and product name
 4. Construct a Shopping List
-  * Add item to shopping list
+   - Add item to shopping list
 
 
 ## Getting Started
